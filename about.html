@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" href="images/favicon.ico" type="image/gif" sizes="32x32">
+    <title>Apatics | About</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/font.css" rel="stylesheet" type="text/css" />
+    <link href="css/media.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+    <script>
+        jQuery(document).ready(function(jQuery) {
+            jQuery("#header").load("header.html");
+            jQuery("#footer").load("footer.html");
+
+            $("#contact_form").validate({
+                rules: {
+                    name: {
+                        required: true
+
+                    },
+                    company: {
+                        required: true
+
+                    },
+                    email: {
+                        required: true,
+                        remote: {
+                            url: "checkEmail.php",
+                            type: "POST"
+                        }
+                    },
+                    phone: {
+                        required: true,
+                        digits: true,
+                        minlength: 10,
+                        maxlength: 12
+                    },
+                    city: {
+                        required: true
+
+                    },
+                    state: {
+                        required: true,
+
+                    },
+                    'type[]': {
+                        required: true
+                    }
+                },
+                messages: {
+                    name: "Please enter name.",
+                    company: "Please enter company name.",
+                    email: {
+                        required: "Email is Required.",
+                        remote: "Email already in use!",
+                    },
+                    phone: "Please enter Phone.",
+                    city: "Please enter City.",
+                    state: "Please enter State."
+                },
+                submitHandler: submitForm
+            });
+            $('#submit').click(function() {
+                var $captcha = $('#g-recaptcha-response'),
+                    response = grecaptcha.getResponse();
+
+                if (response.length === 0) {
+                    $('.msg-error').text("reCAPTCHA is mandatory");
+                    if (!$captcha.hasClass("error")) {
+                        $captcha.addClass("error");
+                    }
+                } else {
+                    $('.msg-error').text('');
+                    $captcha.removeClass("error");
+                }
+            })
+            function submitForm() {
+                var data = $("#contact_form").serialize();
+                $('#loading-image').show();
+                $.ajax({
+                    type: 'POST',
+                    url: 'home_ajax.php',
+                    data: data,
+                    success: function(response) {
+                        console.log(response);
+                        $('#loading-image').hide();
+                        if (response == '1') {
+                            $(".alert").addClass('show');
+                            $("#contact_modal").modal('hide');
+                            grecaptcha.reset();
+                            $('input[type="checkbox"]').prop('checked', false);
+                            $('#contact_form').trigger("reset");
+                        }
+                        if (response == '0') {
+                            $("#captcha_msg").html("Please select Captcha.");
+                        }
+
+                    }
+                });
+                return false;
+            }
+
+            $(function() {
+                var requiredCheckboxes = $('.options :checkbox[required]');
+                requiredCheckboxes.change(function() {
+                    if (requiredCheckboxes.is(':checked')) {
+                        requiredCheckboxes.removeAttr('required');
+                    } else {
+                        requiredCheckboxes.attr('required', 'required');
+                    }
+                });
+            });
+        });
+
+        function toggle(source) {
+            setTimeout(function() {
+                $('#contact_form').trigger("reset");
+                checkboxA = document.getElementById('data_integrity').checked;
+                checkboxB = document.getElementById('network_detection').checked;
+                checkboxC = document.getElementById('consultation_demonstration').checked;
+                checkboxD = document.getElementById('e_news_bulletin').checked;
+                // alert(checkboxA, checkboxB, checkboxC, checkboxD);
+                if (checkboxA == true) {
+                    // alert("Checked");
+                    document.getElementById("data_integrity_model").checked = true;
+                }
+                if (checkboxB == true) {
+                    document.getElementById("network_detection_model").checked = true;
+                }
+                if (checkboxC == true) {
+                    document.getElementById("consultation_demonstration_model").checked = true;
+                }
+                if (checkboxD == true) {
+                    document.getElementById("e_news_bulletin_model").checked = true;
+                }
+            }, 500)
+        }
+        // var chk1 = $("input[type='checkbox'][value='Schedule a FREE provider network data integrity scan']");
+        // var chk2 = $("input[type='checkbox'][value='2']");
+
+        // chk1.on('change', function(){
+        //     chk2.prop('checked',this.checked);
+        // });
+    </script>
+</head> 
+<body>
+    <div id="header" class="custom-header">
+    </div>
+    <div class="alert alert-success alert-dismissible fade" id="msg" role="alert">
+        Thank you for connecting with us !
+        <button type="button" class="close p-0" data-dismiss="alert" aria-label="Close">
+            <img src="images/error-close.svg" alt="Close-error" />
+        </button>
+    </div>
+    <div class="t_margin_main">
+        <div class="container title_container">
+            <h3 class="main_title_solutions">THE COMPANY</h3>
+            <p class="text_title cust_margin">APATICS is the healthcare data intelligence company, powered by HALO AI™, that delivers automated data insights
+                to immediately and continuously reduce risk and optimize healthcare financial and clinical network performance
+                for payers, providers, governments and consumers.</p>
+            <h3 class="main_title_solutions">HALO AI
+                <sup class="rem_bold">TM</sup>
+            </h3>
+            <p class="text_title cust_margin">HALO AI™ is the patented intelligence platform, based on machine and deep-learning, that powers continuous anomalies
+                detection in relationships, behaviors, outcomes and risks that impact healthcare data integrity, clinical
+                quality and financial performance.</p>
+            <h3 class="main_title_solutions">OUR CUSTOMERS</h3>
+            <p class="text_title cust_margin">APATICS works with healthcare payers, providers, governments and consumers to improve clinical and financial
+                performance. Health insurance companies, third party administrators, self-insured companies, health systems,
+                state and federal programs all need high-integrity networks and transactions to deliver on the goal of better
+                healthcare at a great value. Our customers include:</p>
+        </div>
+        <div class="container-fluid set_bg_dark">
+            <div class="container">
+                <div class="row set_content">
+                    <ul>
+                        <li>Health insurance companies</li>
+                        <li>Third party administrators(TPAs)</li>
+                        <li>Self-insured employers</li>
+                        <li>Healthcare consumers</li>
+                    </ul>
+                    <ul>
+                        <li>Hospitals and health systems</li>
+                        <li>Physician networks</li>
+                        <li>Workers compensation payers</li>
+                        <li>Hospic companies</li>
+                    </ul>
+                    <ul>
+                        <li>Medicare Administrative Contractors(MACs)</li>
+                        <li>State government Medicaid/Medicare programs</li>
+                        <li>Federal government programs</li>
+                        <li>CMS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid contact_us">
+            <h3 class="c-pointer" data-toggle="modal" data-target="#contact_modal">Contact us to learn how you can reduce risk to improve
+                <br> financial and clinical performance.
+                <span>
+                    <img src="./images/sign.png" class="sign_img_new" />
+                </span>
+            </h3>
+        </div>
+        <div class="container-fluid custom_margin_top">
+            <img src="./images/about.png" class="img-fluid" />
+            <div class="container-fluid leadership">
+                <div class="container">
+                    <h1>LEADERSHIP</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container margin-set_top">
+            <div class="row">
+                <div class="col-lg-4 col-md-6  col-sm-12 col-xs-12 space_adjust_top">
+                    <img src="./images/dimitri.png" />
+                    <h4 class="text_color">Dimitri Arges</h4>
+                    <h4 class="text_color_chief">Chief Executive Officer</h4>
+                    <p class="text_set">Dimitri is a co-founder of APATICS. He is a proven healthcare IT leader with experience in product management,
+                        business development and technology management in the internet, healthcare and biotech markets.</p>
+                    <p class="text_set"> Mr. Arges has served in healthcare technology consultancies as Founder and Principal at SomaSens and
+                        as a partner at The StrataFusion Group. He also was the founder and CEO of eVitals Corporation, the
+                        first point-of-care medication safety software solutions company.</p>
+                    <p class="text_set"> Dimitri is a member of mHIMSS and earned a BA in Chemistry from Indiana University.</p>
+                    <p class="icon_size">
+                        <a href="#" />
+                        <img src="./images/linkedin.svg"/>
+                        </a>
+                        <a href="#" / class="twitter-mar">
+                            <img src="./images/twitter.svg"/>
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6  col-sm-12 col-xs-12 space_adjust_top">
+                    <img src="./images/theja.png" />
+                    <h4 class="text_color">Theja Birur</h4>
+                    <h4 class="text_color_chief">Chief Technology Officer</h4>
+                    <p class="text_set">Theja is a co-founder of APATICS and inventor of the patented HALO AI™ intelligence platform. She has
+                        20 years of experience in analytics and artificial intelligence with most of that focused on solving
+                        payment and quality challenges for healthcare payers and public health. </p>
+                    <p class="text_set">Her career includes work in the government sector with the Ontario Ministry of Health in Canada. She
+                        also worked at IBM as a management consultant and in the IBM Innovation Lab focused on analytics.
+                        Prior to founding APATICS, Theja worked as a consultant for the California’s State Compensation Insurance
+                        Fund where she was an Associate Director over Big Data and Data Warehouse functions. </p>
+                    <p class="text_set"> She earned a Master of Science degree in Applied Mathematics and Computer Science from the University
+                        of Oklahoma.
+                    </p>
+                    <p class="icon_size">
+                        <a href="https://www.linkedin.com/in/theja-birur-b8359b5/" />
+                        <img src="./images/linkedin.svg"/>
+                        </a>
+                        <a href="https://twitter.com/BirurTheja" / class="twitter-mar">
+                            <img src="./images/twitter.svg"/>
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6  col-sm-12 col-xs-12 space_adjust_top">
+                    <img src="./images/clay.png" />
+                    <h4 class="text_color">Clay Wilemon</h4>
+                    <h4 class="text_color_chief">Chief Commercial Officer</h4>
+                    <p class="text_set">Clay is an investor in APATICS and serves as Chief Commercial Officer. He is the former founder and CEO
+                        of DevicePharm, a strategic marketing firm that helped define and launch over 500 new healthcare
+                        brands in the United States and around the world. DevicePharm was acquired by Brado.</p>
+                    <p class="text_set"> In addition, Clay has been an active investor, co-founder and director in numerous healthcare technology
+                        companies and holds a medical device patent. He is also a partner in Visionary Ventures.</p>
+                    <p class="text_set"> Clay is a longstanding member of the Board of Directors at Octane, a Southern California economic development
+                        organization that has helped early-stage Orange County tech and med-tech companies raise over $2.8
+                        billion in funding in the past decade. He holds a BA degree from Vanderbilt University.</p>
+                    <p class="icon_size">
+                        <a href="https://www.linkedin.com/in/claywilemon/" />
+                        <img src="./images/linkedin.svg"/>
+                        </a>
+                        <a href="https://twitter.com/ClayWilemon" class="twitter-mar">
+                            <img src="./images/twitter.svg"/>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid pad_set_about">
+            <div class="container-fluid leadership">
+                <div class="container">
+                    <h1>ADVISORY BOARD</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container margin-set_top">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mar_top_space">
+                    <img src="./images/omar.png" />
+                    <h4 class="text_color">Omar Rodriguez</h4>
+                    <h4 class="text_color_chief">Executive Advisor
+                        <br>WebTPA/GuideWell</h4>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mar_top_space">
+                    <img src="./images/david.png" />
+                    <h4 class="text_color">David Dieterich</h4>
+                    <h4 class="text_color_chief">Senior Healthcare Lobbyist</h4>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mar_top_space">
+                    <img src="./images/terry.png" />
+                    <h4 class="text_color">Terry Swatley</h4>
+                    <h4 class="text_color_chief">CEO & Chairman
+                        <br> Diversified Health Services</h4>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mar_top_space">
+                    <img src="./images/card.png" />
+                    <h4 class="text_color">Carladenise Edwards, PhD</h4>
+                    <h4 class="text_color_chief">SVP and Chief Strategy Officer
+                        <br> Henry Ford Health System</h4>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mar_top_space">
+                    <img src="./images/scott.png" />
+                    <h4 class="text_color">Scott Whyte</h4>
+                    <h4 class="text_color_chief">Chief Digital Officer
+                        <br> AeroSafe Global</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid pad_set_about mar_set_top_foot">
+            <img src="./images/foot_bg.png" class="img-fluid" />
+        </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer" class="custom-header">
+    </div>
+    <!-- Footer -->
+    <!-- Contact Modal -->
+    <div class="modal fade contact-modal" id="contact_modal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="contac-modal-form">
+                    <div class="modal-logo d-flex align-items-center justify-content-between">
+                        <img src="images/logo.svg" alt="Logo" />
+                        <button class="close-modal" data-dismiss="modal" aria-label="Close">
+                            <img src="images/modal-close.svg" alt="Close-modal" />
+                        </button>
+                    </div>
+                    <form action="" method="POST" id="contact_form" class="contact-modal-form">
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="company" id="company" class="form-control" placeholder="Company">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="city" id="city" class="form-control" placeholder="City">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="state" id="state" class="form-control" placeholder="State">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-end">
+                            <div class="col-md-8">
+                                <div class="connect-option-selection">
+                                    <ul class="mb-0">
+                                        <li>
+                                            <div class="d-flex align-items-center connect-option-link">
+                                                <label class="checkbox">
+                                                    <!-- <input type="checkbox" id="data_integrity" checked="checked"> -->
+                                                    <input type="checkbox" name="type[]" id="data_integrity_model"
+                                                        value="Schedule a FREE provider network data integrity scan" required />
+                                                    <span class="checked-box"></span>
+                                                </label>
+                                                <p>Schedule a <span>FREE</span> provider network data integrity scan</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center connect-option-link">
+                                                <label class="checkbox">
+                                                    <!-- <input type="checkbox" id="network_detection"> -->
+                                                    <input type="checkbox" name="type[]" id="network_detection_model"
+                                                        value="Schedule a FREE FWA network detection scan" required />
+                                                    <span class="checked-box"></span>
+                                                </label>
+                                                <p>Schedule a <span>FREE</span> FWA network detection scan</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center connect-option-link">
+                                                <label class="checkbox">
+                                                    <!-- <input type="checkbox" id="consultation_demonstration"> -->
+                                                    <input type="checkbox" name="type[]" id="consultation_demonstration_model"
+                                                        value="Schedule a consultation and demonstration" required />
+                                                    <span class="checked-box"></span>
+                                                </label>
+                                                <p>Schedule a consultation and demonstration</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center connect-option-link">
+                                                <label class="checkbox">
+                                                    <!-- <input type="checkbox" id="e_news_bulletin"> -->
+                                                    <input type="checkbox" name="type[]" id="e_news_bulletin_model"
+                                                        value="Register for our e-news bulletin" required />
+                                                    <span class="checked-box"></span>
+                                                </label>
+                                                <p>Register for our e-news bulletin</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-flex align-items-center justify-content-end flex-wrap">
+                                <div class="g-recaptcha" data-sitekey="6Le5poEbAAAAANOyuBc25cJ183SYjCEdVj_ZwOII" name="g-recaptcha-response"></div>
+                                <div id="captcha_msg"></div>
+                                <div class="d-flex align-items-center w-100">
+                                    <button type="submit" name="submit" id="submit" class="registerbtn w-100">Submit</button>
+                                    <div class="" id="loading-image" style="display: none;">
+                                        <img src="images/spinner.gif" width="40" class="ml-2" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Modal -->
+</body>
+
+</html>
