@@ -1,11 +1,13 @@
 <?php
 session_start();
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'PHPMailer/Exception.php';
 require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
+include('mail_config.php');
 if (!empty($_POST['g-recaptcha-response'])) {
 	$secret = '6Le5poEbAAAAAOlJ8sYT6zJie-QoAVjtNrMx_LKm';
 	$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
@@ -15,8 +17,8 @@ if (!empty($_POST['g-recaptcha-response'])) {
 	$mail->isSMTP();                      // Set mailer to use SMTP 
 	$mail->Host = 'smtp.gmail.com';       // Specify main and backup SMTP servers 
 	$mail->SMTPAuth = true;               // Enable SMTP authentication 
-	$mail->Username = 'managedservices@apatics.net';   // SMTP username 
-	$mail->Password = 'nikjoilrzexvvdsf';   // SMTP password 
+	$mail->Username = $mail_user_name;   // SMTP username 
+	$mail->Password = $mail_password;   // SMTP password   // SMTP password 
 	$mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
 	$mail->Port = 587;                    // TCP port to connect to 
 
@@ -66,7 +68,7 @@ VALUES ('$name', '$company', '$email', '$phone' , '$city' , '$state' , '$check1'
 	if (mysqli_query($conn, $sql)) {
 		$_SESSION['is_modal'] = 1;
 		$mail->setFrom($email);
-		$mail->addAddress('managedservices@apatics.net');
+		$mail->addAddress($mail_user_name);
 		$mail->isHTML(true);
 		$mail->Subject = 'Info Request';
 
@@ -100,12 +102,12 @@ VALUES ('$name', '$company', '$email', '$phone' , '$city' , '$state' , '$check1'
 			$mail->isSMTP();                      // Set mailer to use SMTP 
 			$mail->Host = 'smtp.gmail.com';       // Specify main and backup SMTP servers 
 			$mail->SMTPAuth = true;               // Enable SMTP authentication 
-			$mail->Username = 'managedservices@apatics.net';   // SMTP username 
-			$mail->Password = 'nikjoilrzexvvdsf';   // SMTP password 
+			$mail->Username = $mail_user_name;   // SMTP username 
+			$mail->Password = $mail_password;   // SMTP password   // SMTP password 
 			$mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
 			$mail->Port = 587;                    // TCP port to connect to 
 
-			$mail->setFrom('managedservices@apatics.net');
+			$mail->setFrom($mail_user_name); 
 			$mail->addAddress($email);
 			$mail->isHTML(true);
 			$mail->Subject = 'Thank You!';
