@@ -5,6 +5,17 @@
         justify-content: space-between;
     }
 }
+@media only screen and (max-width: 1245px){
+    .sanctioned-slide .container{
+        max-width: 100%;
+    }
+    .sanctioned{
+        right: 100px;
+    }
+    .slider-copyright-text{
+        right: 24px;
+    }
+}
 @media only screen and (max-width: 1024px){
     .info{
         padding-top: 12px;

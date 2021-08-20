@@ -11,6 +11,19 @@
     font-style: normal;
 }
 
+/* Bold Italic */
+@font-face {
+     font-family: 'Montserrat-BoldItalic';
+     src: url('../font/Bold-Italic/Montserrat-BoldItalic.eot');
+     src: url('../font/Bold-Italic/Montserrat-BoldItalic.eot?#iefix') format('embedded-opentype'),
+          url('../font/Bold-Italic/Montserrat-BoldItalic.svg#Montserrat-BoldItalic') format('svg'),
+          url('../font/Bold-Italic/Montserrat-BoldItalic.ttf') format('truetype'),
+          url('../font/Bold-Italic/Montserrat-BoldItalic.woff') format('woff'),
+          url('../font/Bold-Italic/Montserrat-BoldItalic.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+}   
+
 /* Light */
 @font-face {
     font-family: 'Montserrat-Light';

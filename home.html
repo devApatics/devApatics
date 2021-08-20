@@ -93,8 +93,8 @@
                         console.log(response);
                         $('#loading-image').hide();
                         if (response == '1') {
-                            $("#contact_modal").modal('hide');
                             grecaptcha.reset();
+                            $("#contact_modal").modal('hide');
                             $('input[type="checkbox"]').prop('checked', false);
                             $('#contact_form').trigger("reset"); 
                             // location.reload();
@@ -165,61 +165,67 @@
     <!-- slider  -->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <!-- <img class="d-block w-100" src="images/Slider-1.png" alt="First slide"> -->
+            <div class="carousel-item active"> 
                 <div class="slider-image" style="background-image: url('images/Slider-1.png');">
-                    <div class="slider-text">
-                        <h1 class="slider-title">
-                            One of your network physicians<br/> is filling a fraudulent claim. <span>Now.</span>
-                        </h1>
-                        <hr class="separator w-100" />
-                        <div class="break-seprator">
-                            <h4 class="slider-about-it d-flex align-items-center"><i class="right-blue-arrow"></i>Do you
-                                know <span>about it?</span></h4>
-                            <div class="signature-text">
-                                <p class="important-text">Immediate<span>.</span> Continuous<span>.</span>
-                                    Better<span>.</span></p>
-                                <div class="logo-section">
-                                    <img src="images/logo.png" width="174" alt="slider-logo" />
-                                    <h6>FWA DETECTION,
-                                        <br>PREVENTION & RECOVERY
-                                    </h6>
-                                    <p class="powered">POWERED BY
-                                        <span class="halo">HALO AI
-                                            <sup>TM</sup>
-                                        </span>
-                                    </p>
+                    <div class="container p-0 position-relative">
+                        <div class="slider-text">
+                            <h1 class="slider-title">
+                                One of your network physicians<br/> is filling a fraudulent claim. <span>Now.</span>
+                                <hr class="separator w-100" />
+                            </h1>
+                            <div class="break-seprator">
+                                <h4 class="slider-about-it d-flex align-items-center"><i class="right-blue-arrow"></i>Do you
+                                    know <span> about it?</span></h4>
+                                <div class="signature-text">
+                                    <p class="important-text">Immediate<span>.</span> Continuous<span>.</span>
+                                        Better<span>.</span></p>
+                                    <div class="logo-section">
+                                        <img src="images/logo.png" width="174" alt="slider-logo" />
+                                        <h6>FWA DETECTION,
+                                            <br>PREVENTION & RECOVERY
+                                        </h6>
+                                        <p class="powered">POWERED BY
+                                            <span class="halo">HALO AI
+                                                <sup>TM</sup>
+                                            </span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                            <p class="slider-copyright-text">©2021 APATICS, Inc.<br/> HALO AI™ is a trademark of APATICS, Inc.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="slider-image" style="background-image: url('images/Slider-2.png');">
-                    <div class="slider-text">
-                        <h1 class="slider-title">
-                            One of your network providers just got</span>
-                        </h1>
-                        <hr class="separator w-100" />
-                        <div class="break-seprator">
-                            <h4 class="slider-about-it d-flex align-items-center"><i class="right-blue-arrow"></i>Do you
-                                know <span>about it?</span></h4>
-                            <div class="signature-text">
-                                <p class="important-text">Immediate<span>.</span> Continuous<span>.</span>
-                                    Better<span>.</span></p>
-                                <div class="logo-section">
-                                    <img src="images/logo.png" width="174" alt="slider-logo" />
-                                    <h6>PROVIDER NETWORK,
-                                        <br>INTEGRITY & PERFORMANCE
-                                    </h6>
-                                    <p class="powered">POWERED BY
-                                        <span class="halo">HALO AI
-                                            <sup>TM</sup>
-                                        </span>
-                                    </p>
+                <div class="slider-image sanctioned-slide" style="background-image: url('images/Slider-2.png');">
+                    <div class="container p-0 position-relative">
+                        <div class="slider-text">
+                            <h1 class="slider-title">
+                                One of your network providers just got</span>
+                                <hr class="separator w-100" />
+                            </h1>
+                            <div class="break-seprator">
+                                <h4 class="slider-about-it d-flex align-items-center"><i class="right-blue-arrow"></i>Do you
+                                    know <span> about it?</span></h4>
+                                <div class="signature-text">
+                                    <p class="important-text">Immediate<span>.</span> Continuous<span>.</span>
+                                        Better<span>.</span></p>
+                                    <div class="logo-section">
+                                        <img src="images/logo.png" width="174" alt="slider-logo" />
+                                        <h6>PROVIDER NETWORK,
+                                            <br>INTEGRITY & PERFORMANCE
+                                        </h6>
+                                        <p class="powered">POWERED BY
+                                            <span class="halo">HALO AI
+                                                <sup>TM</sup>
+                                            </span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                            <img src="images/SANCTIONED.svg" class="sanctioned" width="248" height="92" alt="SANCTIONED" />
+                            <p class="slider-copyright-text">©2021 APATICS, Inc.<br/> HALO AI™ is a trademark of APATICS, Inc.</p>
                         </div>
                     </div>
                 </div>
@@ -570,9 +576,9 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> 
                             <div class="col-md-4 d-flex align-items-center justify-content-end flex-wrap">
-                                <div class="g-recaptcha" data-sitekey="6Le5poEbAAAAANOyuBc25cJ183SYjCEdVj_ZwOII" name="g-recaptcha-response"></div>
+                                <div class="g-recaptcha" data-sitekey="6LczCRIcAAAAAGictKN182hHkpZGrGcy1LjDCP4m" name="g-recaptcha-response"></div>
                                 <div id="captcha_msg"></div>
                                 <div class="d-flex align-items-center w-100">
                                     <button type="submit" name="submit" id="submit" class="registerbtn w-100">Submit</button>

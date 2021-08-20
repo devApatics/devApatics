@@ -7,9 +7,9 @@ use PHPMailer\PHPMailer\Exception;
 require 'PHPMailer/Exception.php';
 require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
-include('mail_config.php');
+include('config.php');
 if (!empty($_POST['g-recaptcha-response'])) {
-	$secret = '6Le5poEbAAAAAOlJ8sYT6zJie-QoAVjtNrMx_LKm';
+	$secret = $google_secret_key;
 	$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
 	$responseData = json_decode($verifyResponse);
 	// Mail Configuration

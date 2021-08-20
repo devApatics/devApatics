@@ -108,6 +108,9 @@ ul{
     line-height: 18px;
     transition: all ease-in-out 0.2s;
 }
+.custom-header .navbar-nav .nav-item.active .nav-link{
+    font-family: 'Montserrat-Bold';
+}
 .custom-header .navbar-nav .nav-item .nav-link:hover{
     color: #FAA916;
 }
@@ -140,23 +143,29 @@ ul{
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding-bottom: 32px;
+    height: 385px;
 }
 .slider-image{
     width: 100%;
     height: 385px;
     background-size: cover;
 }
+.sanctioned{
+    position: absolute;
+    top: 28px;
+    bottom: auto;
+    right: 0;
+}
 .slider-title{
     font-size: 28px;
     line-height: 40px;
     font-family: 'Montserrat-SemiBold';
     color: #1F496A;
-    padding: 21px 0 10px;
+    padding: 21px 0 0;
     letter-spacing: 0.56px;
-    margin: auto 0 0;
-    display: flex; 
+    margin: auto 0 0; 
 }
 .break-seprator {
     display: flex;
@@ -168,7 +177,7 @@ ul{
 }
 .slider-image .separator{
     border-top: 1px solid rgba(25, 105, 162, 0.25); 
-    margin: 0 0 21px;
+    margin: 10px 0 21px;
 }
 .slider-about-it{
     font-size: 25px;
@@ -182,6 +191,7 @@ ul{
 .slider-about-it span{
     color: #276797;
     font-family: 'Montserrat-Regular';
+    margin-left: 10px;
 }
 .signature-text{
     margin-left: 35px;
@@ -488,28 +498,31 @@ ul{
     padding: 15px;
 }
 .main_title_solutions{
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
     color: #3379b0;
     font-size: 18px;
+    line-height: 22px;
 }
 .text_title{
     letter-spacing: 0.21px;
     color: #000000CC;
-    font-weight: normal;
+    font-family: 'Montserrat-Regular';
     font-size: 14px;
+    line-height: 20px;
 }
 .img_1_class h6{
     padding-left: 55px;
     padding-top: 10px;
     font-size: 14px;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
     color: #1F496A;
 
 }
 .title_para{
     color: #1F496A;
-    font-weight: bold;
-    margin-bottom: 5px;;
+    font-family: 'Montserrat-Bold';
+    margin-bottom: 5px;    
+    line-height: 18px;
 }
 .powered{
     color: #ADADAD;
@@ -519,17 +532,21 @@ ul{
 }
 .halo{
     color: #FAA916;
-    font-weight: 600;
+    font-family: 'Montserrat-SemiBold';
 }
 .content{
     color: #000000CC;
     font-size: 14px;
-    font-weight: normal;
+    font-family: 'Montserrat-Regular';
+    line-height: 18px;
+    margin: 0px;
 }
 .border_yellow{
     background-color: #FAA916;
     height: 1px;
     margin-top: 0;
+    margin: 14px 0;
+    border-top: none;
 }
 .space_top{
     margin-top: 10px;
@@ -541,7 +558,7 @@ ul{
 /* News & Events page starts */
 .main_title_news{
     font-size: 18px;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
     text-align: left;
     letter-spacing: 0px;
     color: #3379B0;
@@ -549,16 +566,27 @@ ul{
 }
 .content_text{
     text-align: left;
-font: normal normal normal 14px/20px Montserrat;
-letter-spacing: 0.21px;
-color: #000000CC;
-line-height: 20px;
-margin-top: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.21px;
+    color: #000000CC;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat-Regular';
 }
-.click{
+.news-story-writer img{
+    max-width: 350px;
+}
+.click,.click:hover{
     font-size: 14px;
     color: #1F496A;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
+    line-height: 18px;
+}
+.click img{
+    width: 20px;
+    height: 17px;
 }
 .sign_img{
     width: 25px;
@@ -570,13 +598,13 @@ margin-top: 15px;
 }
 .comp_news_mar_top{
     margin-top: 30px;
-    padding-bottom: 47px;
+    padding-bottom: 44px;
 }
 .company_title{
     font-size: 18px;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
     color: #fff;
-    MARGIN-TOP: 20PX;
+    margin-top: 0px;
     margin-bottom: 35px;
 }
 .set_content{
@@ -584,7 +612,7 @@ margin-top: 15px;
     /* margin-top: 25px; */
 }
 .comp_news_top_mar{
-    padding-top: 13px;
+    padding-top: 31px;
 }
 .center_set{
     text-align: center;
@@ -593,7 +621,7 @@ margin-top: 15px;
     background-color: #fff;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0px 7px 5px 1px #00000073;
+    box-shadow: 0px 7px 9px 1px rgb(0, 0, 0, 0.45);
 }
 .bg_set_box .box{
     padding: 9px;
@@ -601,17 +629,36 @@ margin-top: 15px;
 }
 .box h5{
     color: #1F496A;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
     font-size: 14px;
     line-height: 20px;
 }
+.comp_news_top_mar .box h5{
+    line-height: 18px;
+    letter-spacing: 0.13px;
+    margin-bottom: 0px;
+}
+.comp_news_top_mar .box span.font_set{
+    line-height: 18px;
+    font-size: 14px; 
+    color: #1F496A;
+    margin-bottom: 14px;
+    display: block;
+    letter-spacing: 0.13px;
+}
+.comp_news_top_mar .box p{
+    color: #1F496A;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
 .font_set{
-    font-weight: normal;
+    font-family: 'Montserrat-Regular';
 }
 .yellow_border{
     height: 3px;
     background-color: #FAA916;
-    margin: 0px;    
+    margin: 0px;  
+    border: none;  
 }
 .y_margin_bottom{
     margin-bottom: 30px;
@@ -620,11 +667,12 @@ margin-top: 15px;
     margin-top: 16px;
 }
 .box .big_font {
-    letter-spacing: 0.25px;
-    color: #5690bd;
-    margin-bottom: 0px;
+    letter-spacing: 1.25px;
+    color: #3379B0;
+    text-transform: uppercase;
+    font-size: 14px;
     font-weight: 500;
-    font-size: 18px;
+    font-family: 'Montserrat-Medium';
 }
 .margin-bottom{
     margin-bottom:30px;
@@ -633,15 +681,22 @@ margin-top: 15px;
 
 /* About page starts */ 
 .rem_bold{
-    font-weight: normal;
+    font-family: 'Montserrat-Regular';
 }
 .set_content{
     justify-content: space-between;
 }
 .set_content ul li {
-    padding: 8px;
-    color: #fff;
+    padding: 0;
+    color: #ffffff;
     list-style: none;
+    line-height: 25px;
+    margin-bottom: 4px;
+    letter-spacing: 0.14px; 
+    font-family: 'Montserrat-Light';
+}
+.set_content ul li:last-child{
+    margin-bottom: 0px;
 }
 .set_bg_dark{
     background-color: #1F496A;
@@ -657,10 +712,13 @@ margin-top: 15px;
 .set_content ul li::before {
     content: "\2022";
     color: #FAA916;
-    font-weight: bold;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -1em;
+    font-family: 'Montserrat-Bold';
+    display: inline-block;
+    width: 6px;
+    margin-left: 0;
+    height: 6px;
+    margin-right: 5px;
+    border-radius: 50%;
 }
 .contact_us{
     /* padding: 20px; */
@@ -671,7 +729,8 @@ margin-top: 15px;
     font-size: 20px;
     color: #1F496A;
     letter-spacing: 0.4px;
-    font-weight: 600;
+    font-family: 'Montserrat-SemiBold';
+    line-height: 24px;
 }
 .sign_img_new{
     width: 20px;
@@ -686,38 +745,52 @@ margin-top: 15px;
 }
 .leadership{
     background-color: #276797;
-    padding: 20px;
+    padding: 17px 20px;
 }
 .leadership h1{
     font-size: 20px;
     letter-spacing: 1px;
     color: #FFFFFF;
     text-transform: uppercase;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
     margin: 0;
+    line-height: 30px;
 }
 .text_color{
     font-size: 14px;
     color: #1F496A;
     letter-spacing: 0px;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
     padding-top: 15px;
+    margin-bottom: 2px;
+    line-height: 18px;
 }
 .text_color_chief{
     font-size: 14px;
     color: #3379B0;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
+    line-height: 18px;
 }
 .text_set{
     letter-spacing: 0px;
-color: #000000CC;
-font-size: 14px;
-font-weight: normal;
-text-align: left;
-line-height: 18px;
+    color: rgba(0, 0, 0, 80%);
+    font-size: 14px;
+    font-family: 'Montserrat-Regular';
+    text-align: left;
+    line-height: 18px;
 }
 .icon_size a i {
     font-size: 25px;
+}
+.advisory_board{
+    margin-bottom: 9px;
+}
+.advisory_board .advisory_board-list{
+    margin-bottom: 42px;
+}
+.advisory_board .advisory_board-list img{
+    width: 78px;
+    height: 78px;
 }
 .circle{
 	border-radius: 50%;
@@ -782,7 +855,7 @@ line-height: 18px;
     text-align: center;
     color: #00000080;
     font-size: 27px;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
     opacity: 0.34;
     padding-top: 30px;
     padding-bottom: 20px;
@@ -797,29 +870,32 @@ line-height: 18px;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 500;
+    font-family: 'Montserrat-Medium';
 }
 /* Blogs and Cases ends*/
 
 /* News_1 page starts */
 .title_top_main_set{
     background-color: #1F496A;
-    padding: 30px;
+    padding: 32px 20px 32px 42px;
 }
 .title_top_main_set h2 {
     font-size: 18px;
     color: #fff;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
     text-align: left;
+    margin-bottom: 0px;
     line-height: 22px;
 }
 .pad_set_adjust{
     padding-right: 0px;
 }
 .content_div_text{
-    padding: 45px;
-    line-height: 22px;
+    padding: 24px 45px;
+    line-height: 20px;
     letter-spacing: 0.21px;
     color: #000000CC;
+    font-family: 'Montserrat-Regular';
 }
 .pad_set_adjust_left{
     padding-left: 0px;
@@ -828,31 +904,36 @@ line-height: 18px;
     letter-spacing: 0.27px;
     color: #3379B0;
     font-size: 18px;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
     line-height: 21px;
 }
+.pad_set_adjust .col_font_set{
+    line-height: 18px; 
+    margin-bottom: 14px;
+}
 .title_clean{
-    text-align: left;
-font: normal normal bold 14px/18px Montserrat;
-letter-spacing: 0.21px;
-color: #00000080;
+    text-align: left; 
+    font-size: 14px;
+    line-height: 18px; 
+    letter-spacing: 0.21px;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Montserrat-Bold';
+    margin-bottom: 14px;
 }
 .text_para{
     letter-spacing: 0.21px;
-    color: #00000080;
-    line-height: 18px;
-    font-size: 14px;
-    text-align: left;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 18px;  
+    font-family: 'Montserrat-Regular';
+    margin-bottom: 0px;
 }
 .right_text_font{
     letter-spacing: 0.21px;
-color: #000000CC;
-line-height: 20px;
-letter-spacing: 0.21px;
-color: #000000CC;
-line-height: 20px;
-font-size: 14px;
-padding-left: 30px;
+    color: #000000CC; 
+    line-height: 20px;
+    font-size: 14px;
+    padding-left: 45px;
+    font-family: 'Montserrat-Regular';
 }
 .grey_bg_set{
     background-color: #ADADAD33;
@@ -863,8 +944,9 @@ padding-left: 30px;
     font-size: 14px;
     letter-spacing: 0px;
     color: #1F496A;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
     text-align: center;
+    line-height: 18px;
 }
 /* Progressbar start */
 .progress {
@@ -947,11 +1029,11 @@ padding-left: 30px;
   }
   .pro_font .small {
     font-size: 80%;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
   }
   .small_per{
     font-size: 35px;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
     color: #faa916;
   }
   .rem_margin26{
@@ -972,6 +1054,8 @@ padding-left: 30px;
   letter-spacing: 0px;
   padding-bottom: 37px;
   margin-bottom: 0px;
+  line-height: 18px;
+  font-family: 'Montserrat-Regular';
 }
 .progress_adjust{
   margin-top: 30px;
@@ -988,13 +1072,16 @@ padding-left: 30px;
     letter-spacing: 0px;
     font-size: 14px;
     text-align: left;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
 }
 .blue_bg_dark p{
   color: #fff;
   letter-spacing: 0px;
   font-size: 14px;
   text-align: left;
+  line-height: 20px;
+  margin: 0px;
+  font-family: 'Montserrat-Light';
 }
 .custom_img{
     width: 100%;
@@ -1006,23 +1093,33 @@ padding-left: 30px;
 .last_para h3{
     color: #3379B0;
     font-size: 18px;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
     text-align: left;
+    line-height: 18px;
+    margin-bottom: 14px;
 }
 .last_para h5{
-    color: #00000080;
+    color: rgba(0, 0, 0, 0.5);
     font-size: 14px;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
     letter-spacing: 0px;
+    margin-bottom: 14px;
+}
+.last_para h5 a,.last_para h5 a:hover{
+    line-height: 18px;
+    font-family: 'Montserrat-Bold';
+    color: #3379B0;
 }
 .news_1_mar_top{
     margin-top: 58px;
 }
 .last_para p{
   text-align: left;
-  font-weight: normal;
+  font-family: 'Montserrat-Regular';
   letter-spacing: 0.21px;
   color: #00000099;
+  line-height: 18px;
+  margin-bottom: 14px;
 }
 /* News_1 page ends */
 /* Blog_1 page css starts */
@@ -1031,7 +1128,7 @@ padding-left: 30px;
     color: #3379B0;
     text-align: left;
     line-height: 20px;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
 }
 .para_adjust{
     letter-spacing: 0.21px;
@@ -1066,7 +1163,7 @@ font-size: 14px;
     line-height: 22px;
     letter-spacing: 0px;
 color: #3379B0;
-font-weight: bold;
+font-family: 'Montserrat-Bold';
 }
 .blue_box p{
     letter-spacing: 0.21px;
@@ -1262,7 +1359,7 @@ font-size: 14px;
 .color_change{
     letter-spacing: 0.21px;
 color: #00000099;
-font-weight: bold;
+font-family: 'Montserrat-Bold';
 }
 .margin-top_new{
     margin-top: 15px;
@@ -1277,7 +1374,7 @@ font-weight: bold;
 .bold_set_text{
     letter-spacing: 0.21px;
 color: #3379B0;
-font-weight: bold;
+font-family: 'Montserrat-Bold';
 }
 .pos_relative_set{
     position: relative;
@@ -1288,7 +1385,7 @@ font-weight: bold;
 /* Company news starts */
 .big_title{
     font-size: 18px;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold';
     color: #3379B0;
 
 }
@@ -1337,7 +1434,7 @@ color: #000000CC !important;
     justify-content: flex-start;
 }
 .font_weight_normal{
-    font-weight: normal;
+    font-family: 'Montserrat-Regular';
 }
 .padd_sett{
     padding: 35px;
@@ -1449,7 +1546,7 @@ letter-spacing: 0.18px;
 .contact-modal-form .form-control:-moz-placeholder { /* Firefox 18- */
     color: #ADADAD;
 }
-.registerbtn{
+.registerbtn,.registerbtn:focus{
     background-color: #3379b0;
     color: #ffffff;
     font-size: 12px;
@@ -1462,6 +1559,7 @@ letter-spacing: 0.18px;
     max-width: 148px;
     margin-left: auto;
     border-radius: 4px; 
+    outline: none;
 }
 .g-recaptcha{
     margin-bottom: 30px;
@@ -1484,4 +1582,118 @@ div#captcha_msg {
 }
 .news-footer footer p{
     color: #ADADAD;
+}
+
+
+
+.blog-articles .margin_set-pro{
+    margin: 0px 15px;
+}
+.whitepapers{
+    padding: 24px 15px 40px;
+}
+.blog-detail .text_color{
+    padding-top: 0;
+    margin-bottom: 6px;
+}
+.blog-detail .para_adjust{
+    color: rgb(0, 0, 0, 0.8);
+    line-height: 20px;
+    font-family: 'Montserrat-Regular';
+    margin-bottom: 10px;
+}
+.blog-detail .blue_pad_set.blue_box{
+    max-width: 469px;
+    margin: 60px auto 0;
+} 
+.blog-detail .blog-detail-title{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.blog-detail-subtitle{
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.8);
+    font-family: 'Montserrat-Regular';
+    margin-bottom: 10px;
+}
+.blog-detail .sol_para.sol_mar_top .blog-detail-subtitle{
+    margin-bottom: 10px;
+}
+.blog-detail .font-italic{
+    font-family: 'Montserrat-BoldItalic';
+}
+.blog-detail .powerful-fraud{
+    padding-bottom: 24px;
+}
+.blog-detail .mar_top_up_30{
+    margin-top: 30px;
+}
+.contact-on-apatics .color_change{
+    font-family: 'Montserrat-Bold';
+    color: rgb(0, 0, 0, 0.6);
+}
+.contact-on-apatics .color_change a,.contact-on-apatics .color_change a:hover{
+    color: #3379B0;
+}
+.blog-writer img.img-fluid{
+    margin-right: 26px;
+}
+.blog-writer .info{
+    padding-top: 0px;
+    margin-bottom: 0px;
+}
+.blog-writer .info a,.blog-writer .info a:hover{
+    color: #3379B0;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.21px;
+    font-family: 'Montserrat-Bold';
+}
+.contact-on-apatics p span.font-italic,.blog-detail .set_content ul li{
+    font-family: 'Montserrat-Regular';
+}
+.para_text_26.mar_custom_para.blog-detail-subtitle {
+    margin-top: 30px !important;
+}
+.contact-on-apatics .font_small.blog-detail-subtitle{
+    font-size: 12px;
+}
+.company-news .news-subdetail{
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.18px;
+    color: rgba(0, 0, 0, 0.8);
+    font-family: 'Montserrat-Regular';
+    margin-bottom: 10px;
+}
+.company-mini-title{
+    margin: 10px 0;
+}
+.company-news .big_title{
+    line-height: 20px;
+}
+.company-news .color_change{
+    color: rgb(0, 0, 0, 0.5);
+    line-height: 20px;
+}
+.company-news h4.text_color.pad_top_adjust_about{
+    margin-bottom: 10px;
+}
+.company-news .email-link{
+    line-height: 18px;
+    margin-bottom: 0px;
+}
+.company-news .email-link a,.company-news .email-link a:hover{
+    color: #3379B0;
+}
+.slider-copyright-text{
+    font-size: 5px;
+    line-height: 6px;
+    color: #000000;
+    font-family: 'Montserrat-Regular';
+    position: absolute;
+    text-align: right;
+    right: 0;
+    bottom: 7px;
 }
