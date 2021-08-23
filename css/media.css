@@ -142,7 +142,7 @@
 @media only screen and (max-width: 600px){
     .last_para,.grey_bg_set,.blue_bg_dark{
      padding: 15px;
-    }  
+    }
  }
 @media only screen and (max-width: 500px){
     .cost-reduce-listing .col-md-2{
@@ -157,6 +157,147 @@
     }.blog_1_quote_27::after{
         top: 133px;
         left: 261px;
+    }.t_margin_main .title_container{ 
+        padding-top: 32px;
+        text-align: center;
+    }.main_title_solutions{
+        margin-bottom: 10px;
+    }.t_margin_main .set_bg_dark{
+        margin-top: 0px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 17px;
+        padding-right: 17px;
+        text-align: center;
+    }.t_margin_main .set_bg_dark .container{
+        padding: 0px;
+    }.t_margin_main .set_bg_dark .container .set_content {
+        justify-content: center;
+    }.t_margin_main .contact_us{
+        margin-top: 17px;
+    }.t_margin_main .custom_margin_top{
+        margin-top: 17px;
+    }.hide_mob{
+        display: none;
+    }.for_mob{
+        width: 100%;
+    }.leadership h1{
+        text-align: center;
+    }.margin-set_top{
+        margin-top: 30px;
+    }.space_adjust_top{
+        text-align: center;
+        margin-top: 0px;
+        padding-left: 17px;
+        padding-right: 17px;
+    }.margin-set_top .text_set{
+        text-align: center;
+    }.margin-set_top .text_color{
+        padding-top: 12px;
+    }.margin-set_top .text_color_chief{
+        margin-bottom: 7px;
+    }.top_margin_mobile{
+        margin-top: 14px;
+    }.advisory_board{
+        text-align: center;
+        margin-bottom: 0px;
+    }.advisory_board .advisory_board-list{
+        margin-bottom: 30px;
+    }.contact_us h3{
+        line-height: 22px;
+        letter-spacing: 0.34px;
+        font-size: 17px;
+    }.contact_us .c-pointer br{
+        display: none;
+    }.slider-text{
+        margin-left: 0px;
+    }.slider-title{
+        padding: 20px 17px 0px 17px;
+        text-align: center;
+        letter-spacing: 0.56px;
+    }.slider-title br {
+        display: none;
+    }.separator{
+        margin-top: 14.13px;
+        margin-bottom: 14px;
+    }.network-provider .c-pointer{
+        font-size: 17px;
+        line-height: 22px;
+        letter-spacing: 0.34px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }.health-tip-title{
+        padding: 0px;
+    }.health-tips{
+        padding-left: 0;
+        padding-top: 27px;
+        padding-right: 0px;
+    }.health-tip-list{
+        margin-left: 0;
+    }.health-tip-list .col-md-6{
+        margin-bottom: 25px;
+    }.cost-reduce{
+        padding-top: 39px;
+    }.cost-title{
+        padding-left: 11px;
+        padding-right: 11px;
+    }.cost-reduce-listing{
+        text-align: center;
+        margin-top: 40px;
+    }.cost-reduce-listing .col-md-2{
+        margin-bottom: 40px;
+    }.network-detection h4{
+        font-size: 17px;
+        line-height: 22px;
+    }.automated-date{
+        padding: 0px;
+    }.automated-date .container{
+        padding: 0px;
+    }.health-counter h4{
+        font-weight: bold;
+        text-align: center;
+        padding-left: 60px;
+        padding-right: 60px;
+        margin-bottom: 30px;
+        margin-top: 40px;
+    }.automated-date .risk-reduce-title{
+        padding-left: 17px;
+        padding-right: 17px;
+    }.risk-detail{
+        display: inline-grid !important;
+        width: 100%;
+        text-align: center;
+    }.risk-detail img {
+        margin: 0 auto;
+    }.risk-detail .details-block{
+        margin: 0;
+        margin-top: 17px;
+    }.connect-with-us{
+        padding-top: 30px;
+        padding-left: 0px;
+        padding-right: 0px; 
+        padding-bottom: 40px;
+    }.connect-with-us .container{
+        padding: 0px;
+    }.contact-title h4 {
+        padding-left: 17px;
+        padding-right: 17px;
+        text-align: center;
+    }.connect-option-selection{
+        padding-left: 31px;
+        padding-right: 25px;
+    }.connect-option-selection ul{
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }.contact-details{
+        margin-top: 45px;
+    }.contact-details img{
+        margin-bottom: 40px;
+    }
+}
+@media only screen and (min-width: 767px){
+    .for_mob{
+        display: none;
     }
 }
 @media only screen and (max-width: 320px){
