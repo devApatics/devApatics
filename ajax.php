@@ -7,11 +7,15 @@ use PHPMailer\PHPMailer\Exception;
 require 'PHPMailer/Exception.php';
 require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
-include('config.php');
-if (!empty($_POST['g-recaptcha-response'])) {
+include('config.php'); // Add file for configuration
+
+if (!empty($_POST['g-recaptcha-response'])) //Check the captcha-click or not.
+{
+	// For google captcha
 	$secret = $google_secret_key;
 	$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
 	$responseData = json_decode($verifyResponse);
+	
 	// Mail Configuration
 	$mail = new PHPMailer();
 	$mail->isSMTP();                      // Set mailer to use SMTP 
@@ -22,18 +26,7 @@ if (!empty($_POST['g-recaptcha-response'])) {
 	$mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
 	$mail->Port = 587;                    // TCP port to connect to 
 
-	// DB Configuration
-	$servername = "localhost";
-	$username = "root";
-	//$password = "";
-	$database = "apatics_design";
-
-	$conn = new mysqli($servername, $username, '', $database);
-
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	}
-
+	// Get Form Data
 	$name = $_POST['name'];
 	$company = $_POST['company'];
 	$email = $_POST['email'];
@@ -41,6 +34,7 @@ if (!empty($_POST['g-recaptcha-response'])) {
 	$city = $_POST['city'];
 	$state = $_POST['state'];
 
+	// For all checkboxes
 	if (in_array("Schedule a FREE provider network data integrity scan", $_POST['type'])) {
 		$check1 = "Schedule a FREE provider network data integrity scan";
 	} else {
@@ -62,13 +56,15 @@ if (!empty($_POST['g-recaptcha-response'])) {
 		$check4 = NULL;
 	}
 
+	// Insert the record in DB table.
 	$sql = "INSERT INTO contact_details (user_name, company, email, phone_no, city, state, data_integrity, network_detection, consultation_demonstration, e_news_bulletin, page_type)
 VALUES ('$name', '$company', '$email', '$phone' , '$city' , '$state' , '$check1' , '$check2' ,'$check3' ,'$check4', 'blog_page')";
 
-	if (mysqli_query($conn, $sql)) {
-		$_SESSION['is_modal'] = 1;
-		$mail->setFrom($email);
-		$mail->addAddress($mail_user_name);
+	if (mysqli_query($conn, $sql)) // Store data in table.
+	{
+		$_SESSION['is_modal'] = 1; // Store value in seesion for Modal in blogs page 
+		$mail->setFrom($email); // sender email
+		$mail->addAddress($mail_user_name); // receiver email
 		$mail->isHTML(true);
 		$mail->Subject = 'Info Request';
 
@@ -80,7 +76,7 @@ VALUES ('$name', '$company', '$email', '$phone' , '$city' , '$state' , '$check1'
 		<li>Email: ' . $email . '</li>
 		<li>City: ' . $city . '</li>
 		<li>State: ' . $state . '</li>
-	</ul>';
+		</ul>';
 		$bodyContent .= '<h3>I am interested in</h3>';
 		$bodyContent .= '<ul>';
 		if (!is_null($check1))
@@ -96,6 +92,7 @@ VALUES ('$name', '$company', '$email', '$phone' , '$city' , '$state' , '$check1'
 		$mail->Body = $bodyContent;
 
 		if ($mail->send()) {
+			// Second mail for Thank you
 
 			// Mail Configuration
 			$mail = new PHPMailer();
@@ -107,25 +104,27 @@ VALUES ('$name', '$company', '$email', '$phone' , '$city' , '$state' , '$check1'
 			$mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
 			$mail->Port = 587;                    // TCP port to connect to 
 
-			$mail->setFrom($mail_user_name); 
-			$mail->addAddress($email);
+			$mail->setFrom($mail_user_name); // sender email
+			$mail->addAddress($email); // receiver email
 			$mail->isHTML(true);
 			$mail->Subject = 'Thank You!';
 
 			// Mail body content 
-			$bodyContent = '<h3>Thank you for connecting with us !</h3>';
+			// $bodyContent = '<h3>Thank you for connecting with us !</h3>';
+			$bodyContent = '<p>Thank you for contacting APATICS where we are committed to delivering automated data insights that immediately and continuously reduce risk to improve healthcare financial and clinical performance.</p>';
+			$bodyContent .= '<p>A member of our executive team will contact you within the next 24 hours to schedule a demonstration at your convenience. We look forward to speaking with you soon.</p>';
 
 			$mail->Body = $bodyContent;
 
 			if ($mail->send()) {
-				echo json_encode(1);
+				echo json_encode(1); //If all process done.
 			} else {
-				echo json_encode(2);
+				echo json_encode(2); //If has any issue in second mail send
 			}
 		} else {
-			echo json_encode(2);
+			echo json_encode(2); //If has any issue in first mail send
 		}
 	}
 } else {
-	echo json_encode(0);
+	echo json_encode(0); // If not checked google captcha
 }
