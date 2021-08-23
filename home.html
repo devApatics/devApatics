@@ -20,6 +20,7 @@
             jQuery("#header").load("header.html");
             jQuery("#footer").load("footer.html");
 
+            // For jQuery Validation
             $("#contact_form").validate({
                 rules: {
                     name: {
@@ -68,6 +69,8 @@
                 },
                 submitHandler: submitForm
             });
+
+            // For check google captcha checked or not
             $('#submit').click(function() {
                 var $captcha = $('#g-recaptcha-response'),
                     response = grecaptcha.getResponse();
@@ -82,6 +85,8 @@
                     $captcha.removeClass("error");
                 }
             })
+
+            // Create Ajax call after submit the contact form
             function submitForm() {
                 var data = $("#contact_form").serialize();
                 $('#loading-image').show();
@@ -96,7 +101,7 @@
                             grecaptcha.reset();
                             $("#contact_modal").modal('hide');
                             $('input[type="checkbox"]').prop('checked', false);
-                            $('#contact_form').trigger("reset"); 
+                            $('#contact_form').trigger("reset");
                             // location.reload();
                             $(".alert").addClass('show');
                         }
@@ -109,6 +114,7 @@
                 return false;
             }
 
+            // For Checkbox validation
             $(function() {
                 var requiredCheckboxes = $('.options :checkbox[required]');
                 requiredCheckboxes.change(function() {
@@ -121,6 +127,7 @@
             });
         });
 
+        // For Dependent Checkbox from home page to modal popup
         function toggle(source) {
             setTimeout(function() {
                 $('#contact_form').trigger("reset");
@@ -165,7 +172,7 @@
     <!-- slider  -->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active"> 
+            <div class="carousel-item active">
                 <div class="slider-image" style="background-image: url('images/Slider-1.png');">
                     <div class="container p-0 position-relative">
                         <div class="slider-text">
@@ -174,11 +181,10 @@
                                 <hr class="separator w-100" />
                             </h1>
                             <div class="break-seprator">
-                                <h4 class="slider-about-it d-flex align-items-center"><i class="right-blue-arrow"></i>Do you
-                                    know <span> about it?</span></h4>
+                                <h4 class="slider-about-it d-flex align-items-center"><i class="right-blue-arrow"></i>Do you know <span> about it?</span></h4>
                                 <div class="signature-text">
-                                    <p class="important-text">Immediate<span>.</span> Continuous<span>.</span>
-                                        Better<span>.</span></p>
+                                    <p class="important-text">Immediate<span>.</span> Continuous<span>.</span> Better
+                                        <span>.</span></p>
                                     <div class="logo-section">
                                         <img src="images/logo.png" width="174" alt="slider-logo" />
                                         <h6>FWA DETECTION,
@@ -206,11 +212,10 @@
                                 <hr class="separator w-100" />
                             </h1>
                             <div class="break-seprator">
-                                <h4 class="slider-about-it d-flex align-items-center"><i class="right-blue-arrow"></i>Do you
-                                    know <span> about it?</span></h4>
+                                <h4 class="slider-about-it d-flex align-items-center"><i class="right-blue-arrow"></i>Do you know <span> about it?</span></h4>
                                 <div class="signature-text">
-                                    <p class="important-text">Immediate<span>.</span> Continuous<span>.</span>
-                                        Better<span>.</span></p>
+                                    <p class="important-text">Immediate<span>.</span> Continuous<span>.</span> Better
+                                        <span>.</span></p>
                                     <div class="logo-section">
                                         <img src="images/logo.png" width="174" alt="slider-logo" />
                                         <h6>PROVIDER NETWORK,
@@ -229,7 +234,7 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
     <!-- slider  -->
@@ -275,8 +280,7 @@
                             </span>
                             <div class="health-detail">
                                 <h4>Payers and providers need</h4>
-                                <p>A high-integrity clean claim system to reduce approximately <span>$400B</span> in
-                                    claims denials</p>
+                                <p>A high-integrity clean claim system to reduce approximately <span>$400B</span> in claims denials</p>
                             </div>
                         </div>
                     </div>
@@ -308,43 +312,37 @@
     <!-- Cost reducing -->
     <section class="cost-reduce">
         <div class="container">
-            <h4 class="cost-title">Seamlessly improving healthcare integrity and quality while reducing cost and risk
-                with one simple decision</h4>
+            <h4 class="cost-title">Seamlessly improving healthcare integrity and quality while reducing cost and risk with one simple decision</h4>
             <div class="row justify-content-center cost-reduce-listing">
                 <div class="col-md-2 col-sm-4">
                     <img src="images/Improving_Icon.svg" alt="Improving" />
                     <h2>IMPROVING</h2>
                     <h4>provider network data integrity and performance</h4>
-                    <p>and performance by automating data insights that enable real- time provider data management and
-                        network optimization while reducing costs</p>
+                    <p>and performance by automating data insights that enable real- time provider data management and network optimization while reducing costs</p>
                 </div>
                 <div class="col-md-2 col-sm-4">
                     <img src="images/Reducing_Icon.svg" alt="Reducing" />
                     <h2>REDUCING</h2>
                     <h4>healthcare fraud, waste and abuse</h4>
-                    <p>with automated real-time financial, clinical and behavioral data insights that help prevent,
-                        detect and recover fraudulent claims</p>
+                    <p>with automated real-time financial, clinical and behavioral data insights that help prevent, detect and recover fraudulent claims</p>
                 </div>
                 <div class="col-md-2 col-sm-4">
                     <img src="images/Optimizing_Icon.svg" alt="Optimizing" />
                     <h2>OPTIMIZING</h2>
                     <h4>payment integrity and revenue cycle performance</h4>
-                    <p>by automating and intelligently aligning claims submissions with payment guidelines to reduce
-                        denials and the operational burden of managing the payment process</p>
+                    <p>by automating and intelligently aligning claims submissions with payment guidelines to reduce denials and the operational burden of managing the payment process</p>
                 </div>
                 <div class="col-md-2 col-sm-4">
                     <img src="images/Elevating_Icon.svg" alt="Elevating" />
                     <h2>ELEVATING</h2>
                     <h4>care quality and transparency</h4>
-                    <p>and performance by automating data insights that enable real- time provider data management and
-                        network optimization while reducing costs</p>
+                    <p>and performance by automating data insights that enable real- time provider data management and network optimization while reducing costs</p>
                 </div>
                 <div class="col-md-2 col-sm-4">
                     <img src="images/Reducing_Icon-cylinder.svg" alt="Reducing_Icon-cylinder" />
                     <h2>REDUCING</h2>
                     <h4>pharmacy FWA and improving cost containment</h4>
-                    <p>and performance by automating data insights that enable real- time provider data management and
-                        network optimization while reducing costs</p>
+                    <p>and performance by automating data insights that enable real- time provider data management and network optimization while reducing costs</p>
                 </div>
             </div>
         </div>
@@ -372,8 +370,7 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <h4 class="risk-reduce-title">immediately and continuously reduce risk to improve<br /> healthcare
-                        financial and clinical performance by</h4>
+                    <h4 class="risk-reduce-title">immediately and continuously reduce risk to improve<br /> healthcare financial and clinical performance by</h4>
                     <div class="row health-risk-reduce">
                         <div class="col-md-6">
                             <div class="risk-detail d-flex align-items-center">
@@ -403,8 +400,7 @@
     <section class="connect-with-us">
         <div class="container">
             <div class="contact-title">
-                <h4><span>HELP YOUR TEAM</span> immediately and continuously reduce risk to improve healthcare financial
-                    and clinical performance:</h4>
+                <h4><span>HELP YOUR TEAM</span> immediately and continuously reduce risk to improve healthcare financial and clinical performance:</h4>
                 <hr class="orange-separator" />
                 <div class="connect-option-selection">
                     <ul>
@@ -457,12 +453,12 @@
                 <div class="d-flex align-items-center w-100 contact-details">
                     <img src="images/logo.svg" width="201" alt="Logo" />
                     <div class="separator-orange-vertical"></div>
-                    <div class="address-section"> 
+                    <div class="address-section">
                         <ul class="d-flex align-items-center">
                             <li><a href="javascript:void(0);" class="c-auto">info@apatics.net</a></li>
-                            <li><span>|</span></li> 
-                            <li><a href="javascript:void(0);" class="c-auto">844.597.6400</a></li>  
-                        </ul>  
+                            <li><span>|</span></li>
+                            <li><a href="javascript:void(0);" class="c-auto">844.597.6400</a></li>
+                        </ul>
                         <p>2333 San Ramon Valley Blvd, Suite 190<br/> San Ramon, CA 94583</p>
                     </div>
                     <div class="separator-orange-vertical"></div>
@@ -490,8 +486,7 @@
     </div>
     <!-- Footer -->
     <!-- Contact Modal -->
-    <div class="modal fade contact-modal" id="contact_modal" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal fade contact-modal" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="contac-modal-form">
@@ -582,7 +577,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="col-md-4 d-flex align-items-center justify-content-end flex-wrap">
                                 <div class="g-recaptcha" data-sitekey="6Le5poEbAAAAANOyuBc25cJ183SYjCEdVj_ZwOII" name="g-recaptcha-response"></div>
                                 <div id="captcha_msg"></div>
@@ -594,7 +589,7 @@
                                 </div>
                             </div>
                         </div>
-                    </form> 
+                    </form>
                 </div>
             </div>
         </div>

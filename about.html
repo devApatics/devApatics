@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.ico" type="image/gif" sizes="32x32">
     <title>Apatics | About</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -20,6 +20,7 @@
             jQuery("#header").load("header.html");
             jQuery("#footer").load("footer.html");
 
+            // For jQuery Validation
             $("#contact_form").validate({
                 rules: {
                     name: {
@@ -68,6 +69,8 @@
                 },
                 submitHandler: submitForm
             });
+
+            // For check google captcha checked or not
             $('#submit').click(function() {
                 var $captcha = $('#g-recaptcha-response'),
                     response = grecaptcha.getResponse();
@@ -82,6 +85,8 @@
                     $captcha.removeClass("error");
                 }
             })
+
+            // Create Ajax call after submit the contact form
             function submitForm() {
                 var data = $("#contact_form").serialize();
                 $('#loading-image').show();
@@ -108,6 +113,7 @@
                 return false;
             }
 
+            // For Checkbox validation
             $(function() {
                 var requiredCheckboxes = $('.options :checkbox[required]');
                 requiredCheckboxes.change(function() {
@@ -119,38 +125,9 @@
                 });
             });
         });
-
-        function toggle(source) {
-            setTimeout(function() {
-                $('#contact_form').trigger("reset");
-                checkboxA = document.getElementById('data_integrity').checked;
-                checkboxB = document.getElementById('network_detection').checked;
-                checkboxC = document.getElementById('consultation_demonstration').checked;
-                checkboxD = document.getElementById('e_news_bulletin').checked;
-                // alert(checkboxA, checkboxB, checkboxC, checkboxD);
-                if (checkboxA == true) {
-                    // alert("Checked");
-                    document.getElementById("data_integrity_model").checked = true;
-                }
-                if (checkboxB == true) {
-                    document.getElementById("network_detection_model").checked = true;
-                }
-                if (checkboxC == true) {
-                    document.getElementById("consultation_demonstration_model").checked = true;
-                }
-                if (checkboxD == true) {
-                    document.getElementById("e_news_bulletin_model").checked = true;
-                }
-            }, 500)
-        }
-        // var chk1 = $("input[type='checkbox'][value='Schedule a FREE provider network data integrity scan']");
-        // var chk2 = $("input[type='checkbox'][value='2']");
-
-        // chk1.on('change', function(){
-        //     chk2.prop('checked',this.checked);
-        // });
     </script>
-</head> 
+</head>
+
 <body class="about">
     <div id="header" class="custom-header">
     </div>
@@ -163,20 +140,17 @@
     <div class="t_margin_main">
         <div class="container title_container">
             <h3 class="main_title_solutions">THE COMPANY</h3>
-            <p class="text_title cust_margin">APATICS is the healthcare data intelligence company, powered by HALO AI™, that delivers automated data insights
-                to immediately and continuously reduce risk and optimize healthcare financial and clinical network performance
-                for payers, providers, governments and consumers.</p>
+            <p class="text_title cust_margin">APATICS is the healthcare data intelligence company, powered by HALO AI™, that delivers automated data insights to immediately and continuously reduce risk and optimize healthcare financial and clinical network performance for payers, providers,
+                governments and consumers.</p>
             <h3 class="main_title_solutions">HALO AI
                 <sup class="rem_bold">TM</sup>
             </h3>
-            <p class="text_title cust_margin">HALO AI™ is the patented intelligence platform, based on machine and deep-learning, that powers continuous anomalies
-                detection in relationships, behaviors, outcomes and risks that impact healthcare data integrity, clinical
-                quality and financial performance.</p>
+            <p class="text_title cust_margin">HALO AI™ is the patented intelligence platform, based on machine and deep-learning, that powers continuous anomalies detection in relationships, behaviors, outcomes and risks that impact healthcare data integrity, clinical quality and financial
+                performance.
+            </p>
             <h3 class="main_title_solutions">OUR CUSTOMERS</h3>
-            <p class="text_title">APATICS works with healthcare payers, providers, governments and consumers to improve clinical and financial
-                performance. Health insurance companies, third party administrators, self-insured companies, health systems,
-                state and federal programs all need high-integrity networks and transactions to deliver on the goal of better
-                healthcare at a great value. Our customers include:</p>
+            <p class="text_title">APATICS works with healthcare payers, providers, governments and consumers to improve clinical and financial performance. Health insurance companies, third party administrators, self-insured companies, health systems, state and federal programs
+                all need high-integrity networks and transactions to deliver on the goal of better healthcare at a great value. Our customers include:</p>
         </div>
         <div class="container-fluid set_bg_dark">
             <div class="container">
@@ -224,18 +198,16 @@
                     <img src="./images/dimitri.png" width="78" height="78" />
                     <h4 class="text_color">Dimitri Arges</h4>
                     <h4 class="text_color_chief">Chief Executive Officer</h4>
-                    <p class="text_set">Dimitri is a co-founder of APATICS. He is a proven healthcare IT leader with experience in product management,
-                        business development and technology management in the internet, healthcare and biotech markets.</p>
-                    <p class="text_set"> Mr. Arges has served in healthcare technology consultancies as Founder and Principal at SomaSens and
-                        as a partner at The StrataFusion Group. He also was the founder and CEO of eVitals Corporation, the
-                        first point-of-care medication safety software solutions company.</p>
+                    <p class="text_set">Dimitri is a co-founder of APATICS. He is a proven healthcare IT leader with experience in product management, business development and technology management in the internet, healthcare and biotech markets.</p>
+                    <p class="text_set"> Mr. Arges has served in healthcare technology consultancies as Founder and Principal at SomaSens and as a partner at The StrataFusion Group. He also was the founder and CEO of eVitals Corporation, the first point-of-care medication
+                        safety software solutions company.</p>
                     <p class="text_set"> Dimitri is a member of mHIMSS and earned a BA in Chemistry from Indiana University.</p>
                     <p class="icon_size">
                         <a href="https://www.linkedin.com/in/dimitriarges" target="_blank">
-                            <img src="./images/linkedin.svg"/>
+                            <img src="./images/linkedin.svg" />
                         </a>
                         <a href="https://twitter.com/darges" target="_blank" class="twitter-mar">
-                            <img src="./images/twitter.svg"/>
+                            <img src="./images/twitter.svg" />
                         </a>
                     </p>
                 </div>
@@ -244,22 +216,18 @@
                     <img src="./images/theja.png" width="78" height="78" />
                     <h4 class="text_color">Theja Birur</h4>
                     <h4 class="text_color_chief">Chief Technology Officer</h4>
-                    <p class="text_set">Theja is a co-founder of APATICS and inventor of the patented HALO AI™ intelligence platform. She has
-                        20 years of experience in analytics and artificial intelligence with most of that focused on solving
-                        payment and quality challenges for healthcare payers and public health. </p>
-                    <p class="text_set">Her career includes work in the government sector with the Ontario Ministry of Health in Canada. She
-                        also worked at IBM as a management consultant and in the IBM Innovation Lab focused on analytics.
-                        Prior to founding APATICS, Theja worked as a consultant for the California’s State Compensation Insurance
-                        Fund where she was an Associate Director over Big Data and Data Warehouse functions. </p>
-                    <p class="text_set"> She earned a Master of Science degree in Applied Mathematics and Computer Science from the University
-                        of Oklahoma.
+                    <p class="text_set">Theja is a co-founder of APATICS and inventor of the patented HALO AI™ intelligence platform. She has 20 years of experience in analytics and artificial intelligence with most of that focused on solving payment and quality challenges
+                        for healthcare payers and public health. </p>
+                    <p class="text_set">Her career includes work in the government sector with the Ontario Ministry of Health in Canada. She also worked at IBM as a management consultant and in the IBM Innovation Lab focused on analytics. Prior to founding APATICS, Theja
+                        worked as a consultant for the California’s State Compensation Insurance Fund where she was an Associate Director over Big Data and Data Warehouse functions. </p>
+                    <p class="text_set"> She earned a Master of Science degree in Applied Mathematics and Computer Science from the University of Oklahoma.
                     </p>
                     <p class="icon_size">
                         <a href="https://www.linkedin.com/in/theja-birur-b8359b5/" target="_blank">
-                            <img src="./images/linkedin.svg"/>
+                            <img src="./images/linkedin.svg" />
                         </a>
                         <a href="https://twitter.com/BirurTheja" target="_blank" class="twitter-mar">
-                            <img src="./images/twitter.svg"/>
+                            <img src="./images/twitter.svg" />
                         </a>
                     </p>
                 </div>
@@ -268,20 +236,17 @@
                     <img src="./images/clay.png" width="78" height="78" />
                     <h4 class="text_color">Clay Wilemon</h4>
                     <h4 class="text_color_chief">Chief Commercial Officer</h4>
-                    <p class="text_set">Clay is an investor in APATICS and serves as Chief Commercial Officer. He is the former founder and CEO
-                        of DevicePharm, a strategic marketing firm that helped define and launch over 500 new healthcare
-                        brands in the United States and around the world. DevicePharm was acquired by Brado.</p>
-                    <p class="text_set"> In addition, Clay has been an active investor, co-founder and director in numerous healthcare technology
-                        companies and holds a medical device patent. He is also a partner in Visionary Ventures.</p>
-                    <p class="text_set"> Clay is a longstanding member of the Board of Directors at Octane, a Southern California economic development
-                        organization that has helped early-stage Orange County tech and med-tech companies raise over $2.8
-                        billion in funding in the past decade. He holds a BA degree from Vanderbilt University.</p>
+                    <p class="text_set">Clay is an investor in APATICS and serves as Chief Commercial Officer. He is the former founder and CEO of DevicePharm, a strategic marketing firm that helped define and launch over 500 new healthcare brands in the United States and
+                        around the world. DevicePharm was acquired by Brado.</p>
+                    <p class="text_set"> In addition, Clay has been an active investor, co-founder and director in numerous healthcare technology companies and holds a medical device patent. He is also a partner in Visionary Ventures.</p>
+                    <p class="text_set"> Clay is a longstanding member of the Board of Directors at Octane, a Southern California economic development organization that has helped early-stage Orange County tech and med-tech companies raise over $2.8 billion in funding in
+                        the past decade. He holds a BA degree from Vanderbilt University.</p>
                     <p class="icon_size">
                         <a href="https://www.linkedin.com/in/claywilemon/" />
-                        <img src="./images/linkedin.svg"/>
+                        <img src="./images/linkedin.svg" />
                         </a>
                         <a href="https://twitter.com/ClayWilemon" class="twitter-mar">
-                            <img src="./images/twitter.svg"/>
+                            <img src="./images/twitter.svg" />
                         </a>
                     </p>
                 </div>
@@ -336,8 +301,7 @@
     </div>
     <!-- Footer -->
     <!-- Contact Modal -->
-    <div class="modal fade contact-modal" id="contact_modal" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal fade contact-modal" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="contac-modal-form">
@@ -440,7 +404,7 @@
                                 </div>
                             </div>
                         </div>
-                    </form> 
+                    </form>
                 </div>
             </div>
         </div>
