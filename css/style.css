@@ -1117,7 +1117,7 @@ ul{
 .last_para h5 a,.last_para h5 a:hover{
     line-height: 18px;
     font-family: 'Montserrat-Bold';
-    color: #3379B0;
+    color: #3379B0 !important;
 }
 .news_1_mar_top{
     margin-top: 58px;
