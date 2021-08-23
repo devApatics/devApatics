@@ -459,22 +459,22 @@
                     <div class="separator-orange-vertical"></div>
                     <div class="address-section"> 
                         <ul class="d-flex align-items-center">
-                            <li><a href="mailto:info@apatics.net">info@apatics.net</a></li>
+                            <li><a href="javascript:void(0);" class="c-auto">info@apatics.net</a></li>
                             <li><span>|</span></li> 
-                            <li><a href="tel:info@apatics.net">844.597.6400</a></li>  
+                            <li><a href="javascript:void(0);" class="c-auto">844.597.6400</a></li>  
                         </ul>  
-                        <p>2333 San Ramon Valley Blvd, Suite 190 San Ramon, CA 94583</p>
+                        <p>2333 San Ramon Valley Blvd, Suite 190<br/> San Ramon, CA 94583</p>
                     </div>
                     <div class="separator-orange-vertical"></div>
                     <div class="social-icons">
                         <ul class="social-logos">
                             <li>
-                                <a href="https://www.linkedin.com/in/claywilemon/" target="_blank">
+                                <a href="https://www.linkedin.com/company/apatics" target="_blank">
                                     <img src="images/linkedin.svg" alt="Linkdin Logo" />
                                 </a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/ClayWilemon" target="_blank">
+                                <a href="javascript:void(0);" target="_blank">
                                     <img src="images/Twitter-logo.svg" alt="Twitter Logo" />
                                 </a>
                             </li>
@@ -522,7 +522,13 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="state" id="state" class="form-control" placeholder="State">
+                                    <!-- <input type="text" name="state" id="state" class="form-control" placeholder="State"> -->
+                                    <select class="form-control" placeholder="Select State" name="state" id="state">
+                                        <option>Select State</option>
+                                        <option>New York</option>
+                                        <option>Los Angeles</option>
+                                        <option>Chicago</option> 
+                                      </select>
                                 </div>
                             </div>
                         </div>
@@ -578,7 +584,7 @@
                                 </div>
                             </div> 
                             <div class="col-md-4 d-flex align-items-center justify-content-end flex-wrap">
-                                <div class="g-recaptcha" data-sitekey="6LczCRIcAAAAAGictKN182hHkpZGrGcy1LjDCP4m" name="g-recaptcha-response"></div>
+                                <div class="g-recaptcha" data-sitekey="6Le5poEbAAAAANOyuBc25cJ183SYjCEdVj_ZwOII" name="g-recaptcha-response"></div>
                                 <div id="captcha_msg"></div>
                                 <div class="d-flex align-items-center w-100">
                                     <button type="submit" name="submit" id="submit" class="registerbtn w-100">Submit</button>
