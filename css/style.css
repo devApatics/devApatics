@@ -130,7 +130,7 @@ ul{
     letter-spacing: 0.4px;
 } 
 .custom-header .navbar{
-    padding: 7.5px 26px;
+    padding: 7.5px 15px;
 }
 .custom-header#header {
     padding: 0;
@@ -309,6 +309,10 @@ ul{
     width: 100%;
     background-color: #ffffff;
     padding: 40px 26px 40px;
+}
+.automated-date .health-care-challange{
+    max-width: 1000px;
+    margin: auto;
 }
 .health-counter{
     max-width: 194px;
