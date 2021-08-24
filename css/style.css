@@ -353,6 +353,7 @@ ul{
     max-width: 20%;
     flex: 0 0 20%;
     margin-bottom: 37px;
+    padding: 0 7px;
 }
 .cost-reduce-listing{
     margin-top: 50px;
@@ -1098,7 +1099,10 @@ ul{
     background-color: #1F496A;
     padding: 30px;
     padding-top: 49px;
-  padding-left: 45px;
+    padding-left: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .blue_bg_dark h4{
     color: #fff;
