@@ -102,6 +102,23 @@
         max-width: 100%;
     }.custom-header .navbar a {
         margin-left: 16rem;
+    }.pad_set_adjust {
+        padding-right: 15px;
+    }.pad_set_adjust_left {
+        padding-left: 15px;
+    }.margin-bottom_for_ipad_set{
+        margin-bottom: 10px;
+    }.blog_1_quote_27::before{
+        left: 15px;
+    }.blog_1_quote_27::after{
+        right: 141px;
+        top: 15px;
+    }.full_width_img_resp{
+        width: 100%;
+    }.title_set_stop{
+        margin-top: 20px;
+    }.res_top_margin{
+        margin-top: 30px;
     }
 }
 @media only screen and (max-width: 768px){
@@ -168,6 +185,20 @@
     }
     .address-section p{
         text-align: center;
+    }.border_yellow{
+        margin: 27px 0;
+    }.solution_top_mar{
+        text-align: center;
+    }.mob_responsive_media{
+        padding-left: 0px;
+        padding-right: 0px;
+    }.mob_responsive_media .row{
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }.img_1_class{
+        margin-bottom: 10px;
     }
 }
 @media only screen and (max-width: 600px){
