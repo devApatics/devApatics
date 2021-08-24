@@ -16,15 +16,28 @@
         right: 24px;
     }
 }
+@media only screen and (max-width: 1100px){
+    .full_width{
+        width: 100% !important;
+    }
+}
 @media only screen and (max-width: 1024px){
     .info{
         padding-top: 12px;
     }
     .padd_sett{
         padding: 5px;
-    }
-    
+    }.pos_rel{
+        padding-left: 33px !important;
+    }.quote_left::before{
+        top: 10px;
+        left: 1px;
+    }.quote_left::after{
+        top: 72px;
+        left: 66px;
+    }    
 }
+
 @media only screen and (max-width: 991px){
     .custom-header .navbar-nav .nav-item .nav-link{
         margin-left: 0;
@@ -73,6 +86,22 @@
     }
     .pad_ul_left{
         padding-left: 15px;
+    }.ipad-img-size{
+        width: 100%;
+    }.pos_rel{
+        padding-left: 225px !important;
+    }.quote_left::before{
+        left: 189px;
+    }.quote_left::after{
+        top: 67px;
+        left: 259px;
+    }.custom-header .navbar{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        max-width: 100%;
+    }.custom-header .navbar a {
+        margin-left: 16rem;
     }
 }
 @media only screen and (max-width: 768px){
@@ -85,6 +114,8 @@
     }
     .info{
         padding-top: 20px;  
+    }.custom-header .navbar a {
+        margin-left: 15rem;
     }
 }
 @media only screen and (max-width: 767px){ 
@@ -142,6 +173,14 @@
 @media only screen and (max-width: 600px){
     .last_para,.grey_bg_set,.blue_bg_dark{
      padding: 15px;
+    }.pos_rel{
+        padding-left: 65px !important;
+    }.quote_left::before{
+        left: 33px;
+    }.quote_left::after{
+        left: 99px;
+    }.custom-header .navbar a {
+        margin-left: 4rem;
     }
  }
 @media only screen and (max-width: 500px){
@@ -293,6 +332,10 @@
         margin-top: 45px;
     }.contact-details img{
         margin-bottom: 40px;
+    }.custom-header .navbar{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
     }
 }
 @media only screen and (min-width: 767px){
@@ -312,5 +355,18 @@
     }  
     .title_top_main_set h2{
         font-size: 11px;
-    } 
+    }.custom-header .navbar a{
+        margin-left: 2rem;
+    }.address-section ul{
+        flex-wrap: wrap;
+    }.pos_rel{
+        padding-left: 38px !important;
+    }.quote_left::before{
+        left: 6px;
+    }.quote_left::after{
+        left: 72px;
+    }.healthcare_box_set::after{
+        top: 89px;
+        left: 80px;
+    }
 }

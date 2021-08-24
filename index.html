@@ -16,7 +16,7 @@
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
     <script src='https://www.google.com/recaptcha/api.js' async defer></script>
     <script>
-        jQuery(document).ready(function(jQuery) {
+        jQuery(document).ready(function (jQuery) {
             jQuery("#header").load("header.html");
             jQuery("#footer").load("footer.html");
 
@@ -71,7 +71,7 @@
             });
 
             // For check google captcha checked or not
-            $('#submit').click(function() {
+            $('#submit').click(function () {
                 var $captcha = $('#g-recaptcha-response'),
                     response = grecaptcha.getResponse();
 
@@ -94,7 +94,7 @@
                     type: 'POST',
                     url: 'home_ajax.php',
                     data: data,
-                    success: function(response) {
+                    success: function (response) {
                         console.log(response);
                         $('#loading-image').hide();
                         if (response == '1') {
@@ -115,9 +115,9 @@
             }
 
             // For Checkbox validation
-            $(function() {
+            $(function () {
                 var requiredCheckboxes = $('.options :checkbox[required]');
-                requiredCheckboxes.change(function() {
+                requiredCheckboxes.change(function () {
                     if (requiredCheckboxes.is(':checked')) {
                         requiredCheckboxes.removeAttr('required');
                     } else {
@@ -129,7 +129,7 @@
 
         // For Dependent Checkbox from home page to modal popup
         function toggle(source) {
-            setTimeout(function() {
+            setTimeout(function () {
                 $('#contact_form').trigger("reset");
                 checkboxA = document.getElementById('data_integrity').checked;
                 checkboxB = document.getElementById('network_detection').checked;
@@ -172,19 +172,27 @@
     <!-- slider  -->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active"> 
+            <div class="carousel-item active">
                 <div class="slider-image" style="background-image: url('images/Home_slider_1.png');">
                     <div class="container p-0 position-relative">
                         <div class="slider-text">
                             <h1 class="slider-title">
-                                One of your network physicians<br/> is filling a fraudulent claim. <span>Now.</span>
+                                One of your network physicians
+                                <br/> is filling a fraudulent claim.
+                                <span>Now.</span>
                                 <hr class="separator w-100" />
                             </h1>
                             <div class="break-seprator">
-                                <h4 class="slider-about-it d-flex align-items-center"><i class="right-blue-arrow"></i>Do you know <span> about it?</span></h4>
+                                <h4 class="slider-about-it d-flex align-items-center">
+                                    <i class="right-blue-arrow"></i>Do you know
+                                    <span> about it?</span>
+                                </h4>
                                 <div class="signature-text">
-                                    <p class="important-text">Immediate<span>.</span> Continuous<span>.</span> Better
-                                        <span>.</span></p>
+                                    <p class="important-text">Immediate
+                                        <span>.</span> Continuous
+                                        <span>.</span> Better
+                                        <span>.</span>
+                                    </p>
                                     <div class="logo-section">
                                         <img src="images/logo.png" width="174" alt="slider-logo" />
                                         <h6>FWA DETECTION,
@@ -198,12 +206,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="slider-copyright-text">©2021 APATICS, Inc.<br/> HALO AI™ is a trademark of APATICS, Inc.</p>
+                            <p class="slider-copyright-text">©2021 APATICS, Inc.
+                                <br/> HALO AI<sup class="small_tm">TM</sup> is a trademark of APATICS, Inc.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="carousel-item">
+            <div class="carousel-item">
                 <div class="slider-image sanctioned-slide" style="background-image: url('images/Home_slider_2.png');">
                     <div class="container p-0 position-relative">
                         <div class="slider-text">
@@ -234,79 +243,86 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
     <!-- slider  -->
     <!-- contact FWA detection scan 1 -->
     <div class="network-provider d-flex align-items-center justify-content-center">
         <p class="c-pointer" data-toggle="modal" data-target="#contact_modal">
-            Contact Us For A <span>Free</span> Provider Network Data or FWA Detection Scan
+            Contact Us For A
+            <span>Free</span> Provider Network Data or FWA Detection Scan
             <img src="images/orange-right-arrow.svg" width="20" alt="right-arrow" class="ml-1" />
         </p>
     </div>
     <!-- contact FWA detection scan 1 -->
     <!-- Health care challenges -->
     <div class="health-care-challange">
-        <div class="row m-0">
-            <div class="health-tips">
-                <div class="justify-content-end health-tip-list row">
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-center">
-                            <span class="health-image d-flex align-items-center justify-content-center">
-                                <img src="images/Provide_Network.svg" alt="Provide Network" />
-                            </span>
-                            <div class="health-detail">
-                                <h4>Provider network data</h4>
-                                <p>Is dirty and hard to manage with over <span>$2B</span> in annual maintenance cost</p>
+            <div class="row m-0">
+                <div class="health-tips">
+                    <div class="container justify-content-end health-tip-list row">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <span class="health-image d-flex align-items-center justify-content-center">
+                                    <img src="images/Provide_Network.svg" alt="Provide Network" />
+                                </span>
+                                <div class="health-detail">
+                                    <h4>Provider network data</h4>
+                                    <p>Is dirty and hard to manage with over
+                                        <span>$2B</span> in annual maintenance cost</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-center">
-                            <span class="health-image d-flex align-items-center justify-content-center">
-                                <img src="images/Fraud_Icon.svg" alt="Fraud Icon" />
-                            </span>
-                            <div class="health-detail">
-                                <h4>Fraud, waste and abuse</h4>
-                                <p>Is up to a <span>$700B</span> annual drain on the U.S. healthcare system</p>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <span class="health-image d-flex align-items-center justify-content-center">
+                                    <img src="images/Fraud_Icon.svg" alt="Fraud Icon" />
+                                </span>
+                                <div class="health-detail">
+                                    <h4>Fraud, waste and abuse</h4>
+                                    <p>Is up to a
+                                        <span>$700B</span> annual drain on the U.S. healthcare system</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-center">
-                            <span class="health-image d-flex align-items-center justify-content-center">
-                                <img src="images/Payers_Icon.svg" alt="Payers Icon" />
-                            </span>
-                            <div class="health-detail">
-                                <h4>Payers and providers need</h4>
-                                <p>A high-integrity clean claim system to reduce approximately <span>$400B</span> in claims denials</p>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <span class="health-image d-flex align-items-center justify-content-center">
+                                    <img src="images/Payers_Icon.svg" alt="Payers Icon" />
+                                </span>
+                                <div class="health-detail">
+                                    <h4>Payers and providers need</h4>
+                                    <p>A high-integrity clean claim system to reduce approximately
+                                        <span>$400B</span> in claims denials</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-center">
-                            <span class="health-image d-flex align-items-center justify-content-center">
-                                <img src="images/Search_Icon.svg" alt="Search Icon" />
-                            </span>
-                            <div class="health-detail">
-                                <h4>Payers, providers and patients</h4>
-                                <p>Need care and cost transparency to make better healthcare decisions</p>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <span class="health-image d-flex align-items-center justify-content-center">
+                                    <img src="images/Search_Icon.svg" alt="Search Icon" />
+                                </span>
+                                <div class="health-detail">
+                                    <h4>Payers, providers and patients</h4>
+                                    <p>Need care and cost transparency to make better healthcare decisions</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="health-tip-title">
-                <div class="health-counter">
-                    <hr class="orange-separator" />
-                    <h4>
-                        Addressing<br /> $1 Trillion In<br /> Major Healthcare<br /> Challenges
-                    </h4>
-                    <hr class="orange-separator" />
+                <div class="health-tip-title">
+                    <div class="health-counter">
+                        <hr class="orange-separator" />
+                        <h4>
+                            Addressing
+                            <br /> $1 Trillion In
+                            <br /> Major Healthcare
+                            <br /> Challenges
+                        </h4>
+                        <hr class="orange-separator" />
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
     <!-- Health care challenges -->
     <!-- Cost reducing -->
@@ -318,31 +334,36 @@
                     <img src="images/Improving_Icon.svg" alt="Improving" />
                     <h2>IMPROVING</h2>
                     <h4>provider network data integrity and performance</h4>
-                    <p>and performance by automating data insights that enable real- time provider data management and network optimization while reducing costs</p>
+                    <p>real-time by automating data insights that enable real- time provider data management and network optimization
+                        while reducing costs</p>
                 </div>
                 <div class="col-md-2 col-sm-4">
                     <img src="images/Reducing_Icon.svg" alt="Reducing" />
                     <h2>REDUCING</h2>
                     <h4>healthcare fraud, waste and abuse</h4>
-                    <p>with automated real-time financial, clinical and behavioral data insights that help prevent, detect and recover fraudulent claims</p>
+                    <p>with automated real-time financial, clinical and behavioral data insights that help prevent, detect and
+                        recover fraudulent claims</p>
                 </div>
                 <div class="col-md-2 col-sm-4">
                     <img src="images/Optimizing_Icon.svg" alt="Optimizing" />
                     <h2>OPTIMIZING</h2>
                     <h4>payment integrity and revenue cycle performance</h4>
-                    <p>by automating and intelligently aligning claims submissions with payment guidelines to reduce denials and the operational burden of managing the payment process</p>
+                    <p>by automating and intelligently aligning claims submissions with payment guidelines to reduce denials
+                        and the operational burden of managing the payment process</p>
                 </div>
                 <div class="col-md-2 col-sm-4">
                     <img src="images/Elevating_Icon.svg" alt="Elevating" />
                     <h2>ELEVATING</h2>
                     <h4>care quality and transparency</h4>
-                    <p>and performance by automating data insights that enable real- time provider data management and network optimization while reducing costs</p>
+                    <p>and performance by automating data insights that enable real- time provider data management and network
+                        optimization while reducing costs</p>
                 </div>
                 <div class="col-md-2 col-sm-4">
                     <img src="images/Reducing_Icon-cylinder.svg" alt="Reducing_Icon-cylinder" />
                     <h2>REDUCING</h2>
                     <h4>pharmacy FWA and improving cost containment</h4>
-                    <p>and performance by automating data insights that enable real- time provider data management and network optimization while reducing costs</p>
+                    <p>and performance by automating data insights that enable real- time provider data management and network
+                        optimization while reducing costs</p>
                 </div>
             </div>
         </div>
@@ -351,7 +372,8 @@
     <!-- Network detection scan -->
     <section class="network-detection text-center" data-toggle="modal" data-target="#exampleModal">
         <h4 class="c-pointer m-0" data-toggle="modal" data-target="#contact_modal">
-            Contact Us For A <span>Free</span> FWA Network Detection Scan
+            Contact Us For A
+            <span>Free</span> FWA Network Detection Scan
             <img src="images/blue-right-arrow.svg" alt="Blue-arrow" />
         </h4>
     </section>
@@ -359,18 +381,21 @@
     <!-- delivering automated data -->
     <section class="automated-date">
         <div class="container">
-            <div class="row">
+            <div class="row health-care-challange">
                 <div class="col-md-3">
                     <div class="health-counter">
                         <hr class="orange-separator" />
                         <h4>
-                            Delivering<br /> automated data<br /> insights that…
+                            Delivering
+                            <br /> automated data
+                            <br /> insights that…
                         </h4>
                         <hr class="orange-separator hide_mob" />
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <h4 class="risk-reduce-title">immediately and continuously reduce risk to improve<br /> healthcare financial and clinical performance by</h4>
+                    <h4 class="risk-reduce-title">immediately and continuously reduce risk to improve
+                        <br /> healthcare financial and clinical performance by</h4>
                     <div class="row health-risk-reduce">
                         <div class="col-md-6">
                             <div class="risk-detail d-flex align-items-center">
@@ -386,7 +411,8 @@
                                 <img src="images/calender.svg" alt="Make it easy" />
                                 <div class="details-block">
                                     <h4>Making It Simple</h4>
-                                    <p>to implement and <br class="for_mob">see improvement</p>
+                                    <p>to implement and
+                                        <br class="for_mob">see improvement</p>
                                 </div>
                             </div>
                         </div>
@@ -401,7 +427,9 @@
     <section class="connect-with-us">
         <div class="container">
             <div class="contact-title">
-                <h4><span>HELP YOUR TEAM</span> immediately and continuously reduce risk to improve healthcare financial and clinical performance:</h4>
+                <h4>
+                    <span>HELP YOUR TEAM</span> immediately and continuously reduce risk to improve healthcare financial and clinical
+                    performance:</h4>
                 <hr class="orange-separator hide_mob" />
                 <div class="connect-option-selection">
                     <ul>
@@ -409,30 +437,31 @@
                             <div class="d-flex align-items-center connect-option-link" onClick="toggle(this)">
                                 <label class="checkbox">
                                     <!-- <input type="checkbox" id="data_integrity" checked="checked"> -->
-                                    <input type="checkbox" name="type[]" id="data_integrity"
-                                                        value="Schedule a FREE provider network data integrity scan" required />
+                                    <input type="checkbox" name="type[]" id="data_integrity" value="Schedule a FREE provider network data integrity scan" required
+                                    />
                                     <span class="checked-box"></span>
                                 </label>
-                                <p>Schedule a <span>FREE</span> provider network data integrity scan</p>
+                                <p>Schedule a
+                                    <span>FREE</span> provider network data integrity scan</p>
                             </div>
                         </li>
                         <li data-toggle="modal" data-target="#contact_modal">
                             <div class="d-flex align-items-center connect-option-link" onClick="toggle(this)">
                                 <label class="checkbox">
                                     <!-- <input type="checkbox" id="network_detection"> -->
-                                    <input type="checkbox" name="type[]" id="network_detection"
-                                                        value="Schedule a FREE FWA network detection scan" required />
+                                    <input type="checkbox" name="type[]" id="network_detection" value="Schedule a FREE FWA network detection scan" required />
                                     <span class="checked-box"></span>
                                 </label>
-                                <p>Schedule a <span>FREE</span> FWA network detection scan</p>
+                                <p>Schedule a
+                                    <span>FREE</span> FWA network detection scan</p>
                             </div>
                         </li>
                         <li data-toggle="modal" data-target="#contact_modal">
                             <div class="d-flex align-items-center connect-option-link" onClick="toggle(this)">
                                 <label class="checkbox">
                                     <!-- <input type="checkbox" id="consultation_demonstration"> -->
-                                    <input type="checkbox" name="type[]" id="consultation_demonstration"
-                                                        value="Schedule a consultation and demonstration" required />
+                                    <input type="checkbox" name="type[]" id="consultation_demonstration" value="Schedule a consultation and demonstration" required
+                                    />
                                     <span class="checked-box"></span>
                                 </label>
                                 <p>Schedule a consultation and demonstration</p>
@@ -442,8 +471,7 @@
                             <div class="d-flex align-items-center connect-option-link" onClick="toggle(this)">
                                 <label class="checkbox">
                                     <!-- <input type="checkbox" id="e_news_bulletin"> -->
-                                    <input type="checkbox" name="type[]" id="e_news_bulletin"
-                                                        value="Register for our e-news bulletin" required />
+                                    <input type="checkbox" name="type[]" id="e_news_bulletin" value="Register for our e-news bulletin" required />
                                     <span class="checked-box"></span>
                                 </label>
                                 <p>Register for our e-news bulletin</p>
@@ -457,11 +485,18 @@
                     <div class="separator-orange-vertical"></div>
                     <div class="address-section">
                         <ul class="d-flex align-items-center">
-                            <li><a class="c-auto">info@apatics.net</a></li>
-                            <li><span>|</span></li> 
-                            <li><a class="c-auto">844.597.6400</a></li>  
-                        </ul>  
-                        <p>2333 San Ramon Valley Blvd, Suite 190<br/> San Ramon, CA 94583</p>
+                            <li>
+                                <a class="c-auto">info@apatics.net</a>
+                            </li>
+                            <li>
+                                <span>|</span>
+                            </li>
+                            <li>
+                                <a class="c-auto">844.597.6400</a>
+                            </li>
+                        </ul>
+                        <p>2333 San Ramon Valley Blvd, Suite 190
+                            <br/> San Ramon, CA 94583</p>
                     </div>
                     <div class="separator-orange-vertical"></div>
                     <div class="social-icons">
@@ -489,7 +524,8 @@
     </div>
     <!-- Footer -->
     <!-- Contact Modal -->
-    <div class="modal fade contact-modal" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal fade contact-modal" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="contac-modal-form">
@@ -525,8 +561,8 @@
                                         <option>Select State</option>
                                         <option>New York</option>
                                         <option>Los Angeles</option>
-                                        <option>Chicago</option> 
-                                      </select>
+                                        <option>Chicago</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -538,30 +574,32 @@
                                             <div class="d-flex align-items-center connect-option-link">
                                                 <label class="checkbox">
                                                     <!-- <input type="checkbox" id="data_integrity" checked="checked"> -->
-                                                    <input type="checkbox" name="type[]" id="data_integrity_model"
-                                                        value="Schedule a FREE provider network data integrity scan" required />
+                                                    <input type="checkbox" name="type[]" id="data_integrity_model" value="Schedule a FREE provider network data integrity scan"
+                                                        required />
                                                     <span class="checked-box"></span>
                                                 </label>
-                                                <p>Schedule a <span>FREE</span> provider network data integrity scan</p>
+                                                <p>Schedule a
+                                                    <span>FREE</span> provider network data integrity scan</p>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="d-flex align-items-center connect-option-link">
                                                 <label class="checkbox">
                                                     <!-- <input type="checkbox" id="network_detection"> -->
-                                                    <input type="checkbox" name="type[]" id="network_detection_model"
-                                                        value="Schedule a FREE FWA network detection scan" required />
+                                                    <input type="checkbox" name="type[]" id="network_detection_model" value="Schedule a FREE FWA network detection scan" required
+                                                    />
                                                     <span class="checked-box"></span>
                                                 </label>
-                                                <p>Schedule a <span>FREE</span> FWA network detection scan</p>
+                                                <p>Schedule a
+                                                    <span>FREE</span> FWA network detection scan</p>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="d-flex align-items-center connect-option-link">
                                                 <label class="checkbox">
                                                     <!-- <input type="checkbox" id="consultation_demonstration"> -->
-                                                    <input type="checkbox" name="type[]" id="consultation_demonstration_model"
-                                                        value="Schedule a consultation and demonstration" required />
+                                                    <input type="checkbox" name="type[]" id="consultation_demonstration_model" value="Schedule a consultation and demonstration"
+                                                        required />
                                                     <span class="checked-box"></span>
                                                 </label>
                                                 <p>Schedule a consultation and demonstration</p>
@@ -571,8 +609,7 @@
                                             <div class="d-flex align-items-center connect-option-link">
                                                 <label class="checkbox">
                                                     <!-- <input type="checkbox" id="e_news_bulletin"> -->
-                                                    <input type="checkbox" name="type[]" id="e_news_bulletin_model"
-                                                        value="Register for our e-news bulletin" required />
+                                                    <input type="checkbox" name="type[]" id="e_news_bulletin_model" value="Register for our e-news bulletin" required />
                                                     <span class="checked-box"></span>
                                                 </label>
                                                 <p>Register for our e-news bulletin</p>

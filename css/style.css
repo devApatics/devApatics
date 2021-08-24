@@ -131,6 +131,9 @@ ul{
 } 
 .custom-header .navbar{
     padding: 7.5px 26px;
+}
+.custom-header#header {
+    padding: 0;
     box-shadow: 0px 7px 5px 1px #00000073;
     position: relative;
     z-index: 9999;
@@ -142,6 +145,10 @@ ul{
 }
 .custom-header .navbar-nav .nav-item:first-child .nav-link{
     margin-left: 0px;
+}
+.navbar-toggler{
+    border: none;
+    outline: none !important;
 }
 /* Header css */
 
@@ -206,7 +213,7 @@ ul{
     margin-left: 35px;
 }
 .important-text{
-    font-size: 15px;
+    font-size: 17px;
     line-height: 23px;
     color: #000000;
     font-family: 'Montserrat-SemiBold';
@@ -261,10 +268,10 @@ ul{
     background-color: #3379B0;
     padding: 40px 42px 0 27px;
 }   
-.health-tip-list {
+/* .health-tip-list {
     max-width: 800px;
     margin-left: auto;
-}
+} */
 .health-tip-list .col-md-6{
     margin-bottom: 40px;
 }
@@ -389,10 +396,12 @@ ul{
     margin-bottom: 30px;
 }
 .automated-date .health-counter h4{
-    color: #ffffff;
     font-size: 20px;
+    letter-spacing: 0.4px;
     line-height: 35px;
+    color: #fff;
     text-align: center;
+    font-family: 'Montserrat-Bold';
     margin: 41px 0px 42px;
 }
 .automated-date .risk-reduce-title{
@@ -424,6 +433,9 @@ ul{
 .health-risk-reduce{
     max-width: 590px;
     margin: 30px auto 0;
+}
+.align_item_center{
+    align-items: center;
 }
 /* automated-date */
 /* connect-with-us */
@@ -511,6 +523,14 @@ ul{
     color: #3379b0;
     font-size: 18px;
     line-height: 22px;
+}
+.main_title_solutions sup {
+    font-size: 8px;
+    top: -.7em;
+}
+.small_tm{
+    font-size: 7px;
+    top: -.7em;
 }
 .text_title{
     letter-spacing: 0.21px;
@@ -1079,7 +1099,8 @@ ul{
 .blue_bg_dark h4{
     color: #fff;
     letter-spacing: 0px;
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 18px;
     text-align: left;
     font-family: 'Montserrat-Bold';
 }
@@ -1145,7 +1166,7 @@ color: #000000CC;
 font-size: 14px;
 }
 .pad_box_set{
-    padding-left: 60px;
+    padding-left: 20px;
 }
 .margin_set_top_adjust_26{
     margin-top: 30px;
@@ -1162,10 +1183,10 @@ font-size: 14px;
 
 }
 .blue_pad_set{
-    padding-top: 26px;
+    padding-top: 21px;
     padding-left: 29px;
     padding-right: 31px;
-    padding-bottom: 29px;
+    padding-bottom: 21px;
 }
 .blue_box h2{
     font-size: 18px;
@@ -1173,6 +1194,8 @@ font-size: 14px;
     letter-spacing: 0px;
 color: #3379B0;
 font-family: 'Montserrat-Bold';
+max-width: 600px;
+margin: 0 auto;
 }
 .blue_box p{
     letter-spacing: 0.21px;
@@ -1211,7 +1234,7 @@ font-size: 14px;
     background-size: contain;
     background-repeat: no-repeat;
     top: 25px;
-    left: 11px;
+    left: 113px;
     color: #FAA916;
     position: absolute !important;
 }
@@ -1223,7 +1246,8 @@ font-size: 14px;
     display: inline-block;
     background-size: contain;
     top: 12px;
-    left: 420px;
+    left: auto;
+    right: 261px;
     color: #FAA916;
     position: absolute !important;
     /* transform: rotate(
@@ -1265,7 +1289,7 @@ font-size: 14px;
     height: 96px;
     display: inline-block;
     background-size: contain;
-    top: 46px;
+    top: 9px;
     left: -7px;
     color: #FAA916;
     position: absolute !important;
@@ -1277,7 +1301,7 @@ font-size: 14px;
     height: 96px;
     display: inline-block;
     background-size: contain;
-    top: 59px;
+    top: 23px;
     left: 211px;
     position: absolute !important;
     /* transform: rotate( 
@@ -1305,7 +1329,7 @@ font-size: 14px;
     height: 96px;
     display: inline-block;
     background-size: contain;
-    top: 70px;
+    top: 10px;
     left: 21px;
     color: #FAA916;
     position: absolute !important;
@@ -1317,7 +1341,7 @@ font-size: 14px;
     height: 96px;
     display: inline-block;
     background-size: contain;
-    top: 128px;
+    top: 69px;
     left: 91px;
     position: absolute !important;
     /* transform: rotate( 
@@ -1327,8 +1351,8 @@ font-size: 14px;
 }
 .pos_rel{
     position: relative  !important;
-    padding-bottom: 61px  !important;
-    padding-top: 91px  !important;
+    padding-bottom: 31px  !important;
+    padding-top: 31px  !important;
     /* margin: 0 auto; */
     padding-left: 55px  !important;
 }
@@ -1341,7 +1365,7 @@ font-size: 14px;
     margin-top: 37px;
 }
 .width_set_blue{
-    max-width: 671px;
+    max-width: 880px;
     margin: auto;
     padding: 30px;
     padding-top: 45px;
@@ -1403,6 +1427,7 @@ font-family: 'Montserrat-Bold';
 }
 .pad_15{
     padding: 15px;
+    padding-top: 0px;
 }
 .company_margin_top_main{
     margin-top: 55px;
@@ -1411,6 +1436,7 @@ font-family: 'Montserrat-Bold';
 .pad_top_adjust_about{
     padding-top: 0px;
 }
+
 /* Company news ends */
 
 /* Blog_2 starts */ 
@@ -1459,7 +1485,7 @@ letter-spacing: 0.18px;
 
 }
 .text_mar_top{
-    margin-top: 62px;
+    margin-top: 25px;
 }
 .healthcare_box_set{
     display: block;
@@ -1467,8 +1493,8 @@ letter-spacing: 0.18px;
     padding-left: 30px;
     max-width: 322px !important;
     margin: 0 auto 15px;
-    padding-top: 67px;
-    padding-bottom: 36px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .pad_ul_left{
     padding-left: 20px;
@@ -1618,8 +1644,8 @@ div#captcha_msg {
     margin-bottom: 10px;
 }
 .blog-detail .blue_pad_set.blue_box{
-    max-width: 469px;
-    margin: 60px auto 0;
+    /* max-width: 469px; */
+    margin: 25px auto 0;
 } 
 .blog-detail .blog-detail-title{
     margin-top: 30px;
