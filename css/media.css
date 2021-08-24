@@ -185,6 +185,20 @@
     }
     .address-section p{
         text-align: center;
+    }.border_yellow{
+        margin: 27px 0;
+    }.solution_top_mar{
+        text-align: center;
+    }.mob_responsive_media{
+        padding-left: 0px;
+        padding-right: 0px;
+    }.mob_responsive_media .row{
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }.img_1_class{
+        margin-bottom: 10px;
     }
 }
 @media only screen and (max-width: 600px){
