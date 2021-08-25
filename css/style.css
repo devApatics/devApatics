@@ -537,6 +537,10 @@ ul{
     font-size: 7px;
     top: -.7em;
 }
+.toosmall_tm{
+    font-size: 3px;
+    top: -.6em;
+}
 .text_title{
     letter-spacing: 0.21px;
     color: #000000CC;
