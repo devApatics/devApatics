@@ -331,12 +331,17 @@
         padding-bottom: 10px;
     }.slider_1_section h6{
         padding-left: 104px;
+    }.for_mob{
+        display: block !important;
+        width: 100%;
+    }.t_margin_main{
+        text-align: center;
+    }.space_adjust_top p{
+        text-align: center;
     }
 }
 @media only screen and (max-width: 766px){
-    .for_mob{
-        display: block;
-    }
+    
 }
 @media only screen and (max-width: 600px){
     .last_para,.grey_bg_set,.blue_bg_dark{
