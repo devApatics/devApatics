@@ -88,7 +88,7 @@
         padding-left: 15px;
     }
     .res_pad_set{
-        margin-top: 20px;
+        margin-top: 30px;
     }
     .sign_img{
         width: 25px !important;
@@ -98,12 +98,13 @@
     }.ipad-img-size{
         width: 100%;
     }.pos_rel{
-        padding-left: 225px !important;
+        padding-left: 0px !important;
     }.quote_left::before{
-        left: 189px;
+        left: 138px;
     }.quote_left::after{
-        top: 67px;
-        left: 259px;
+        top: 23px;
+        right: 185px;
+        left: auto;
     }.custom-header .navbar{
         display: flex;
         flex-direction: row-reverse;
@@ -178,6 +179,28 @@
         text-align: center;
     }.bg_color_change p{
         text-align: center;
+    }.sol_para{
+        text-align: center;
+    }.company-news{
+        text-align: center; 
+    }.sol_para .big_title{
+        max-width: 600px;
+        margin: 0 auto !important;
+    }.pad_top_adjust_about,.email-link{
+        width: 100%;
+    }.blog_2_mar_set{
+        text-align: center;
+    }.healthcare_box_set{
+        padding-left: 0px !important;
+    }.healthcare_box_set::after{
+        left: 218px;
+    }.pos_rel h2 br{
+        display: none;
+    }.ul_mar_top{
+        text-align: left !important;
+    }
+    .quote_left{
+        max-width: 350px !important;
     }
 }
 @media only screen and (max-width: 768px){
@@ -408,6 +431,13 @@
     }.main_title_news{
         max-width: 310px;
         margin: 0 auto;
+    }.quote_left::before{
+        left: 51px;
+    }.quote_left::after{
+        top: 23px;
+        right: 95px;
+    }.para_text_26.mar_custom_para.blog-detail-subtitle{
+        margin-top: 0px !important;
     }
 }
 @media only screen and (max-width: 766px){
@@ -419,9 +449,9 @@
     }.pos_rel{
         padding-left: 65px !important;
     }.quote_left::before{
-        left: 33px;
+        left: 80px;
     }.quote_left::after{
-        left: 99px;
+        left: 350px;
     }.custom-header .navbar a {
         margin-left: 4rem;
     }.padding_bg_dark_responsive{
