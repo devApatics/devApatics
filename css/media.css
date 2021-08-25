@@ -230,6 +230,8 @@
         left: 99px;
     }.custom-header .navbar a {
         margin-left: 4rem;
+    }.padding_bg_dark_responsive{
+        padding: 30px;
     }
  }
  @media only screen and (max-width: 632px){

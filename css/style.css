@@ -1163,6 +1163,13 @@ ul{
   line-height: 18px;
   margin-bottom: 14px;
 }
+.bg_color_change{
+    background-color: #000000CC;
+    padding: 15px;
+}
+.set_margin_top_para{
+    margin-top: 14px !important;
+}
 /* News_1 page ends */
 /* Blog_1 page css starts */
 .title_set_stop{
