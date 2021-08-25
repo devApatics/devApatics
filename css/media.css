@@ -167,6 +167,7 @@
     }
     .contact-details{
         flex-wrap: wrap;
+        margin-top: 30px;
     }
     .separator-orange-vertical{
         display: none;
