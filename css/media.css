@@ -214,6 +214,11 @@
         justify-content: center;
     }
 }
+@media only screen and (max-width: 766px){
+    .for_mob{
+        display: none;
+    }
+}
 @media only screen and (max-width: 600px){
     .last_para,.grey_bg_set,.blue_bg_dark{
      padding: 15px;
@@ -264,6 +269,7 @@
         display: none;
     }.for_mob{
         width: 100%;
+        display: block;
     }.leadership h1{
         text-align: center;
     }.margin-set_top{
