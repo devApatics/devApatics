@@ -134,6 +134,20 @@
     .contact-modal .modal-content{
         padding: 48px 15px 36px 15px;
     }
+    .news-first-section{
+        text-align: center;
+    }
+    .main_title_news{
+        margin-top: 30px;
+        line-height: 22px;
+        text-align: center;
+    }
+    .res_query .content_text {
+        text-align: center;
+    }
+    .bg_set_box{
+        margin: 0 auto;
+    }
 }
 @media only screen and (max-width: 768px){
     .res_query{
@@ -357,6 +371,11 @@
     }.mobile_san img{
         margin: 0 auto;
     }.logo-section img{
+        margin: 0 auto;
+    }.news-first-section{
+        text-align: center;
+    }.main_title_news{
+        max-width: 310px;
         margin: 0 auto;
     }
 }
@@ -635,5 +654,8 @@
     }.sanctioned{
         top: 295px;
         right: 40px;
+    }
+    .comp_news_mar_top{
+        height: 330px !important;
     }
 }
