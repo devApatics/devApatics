@@ -170,10 +170,10 @@ ul{
 }
 .sanctioned{
     position: absolute;
-    top: 171px;
+    top: 50%;
     bottom: auto;
     right: 0;
-    transform: translateY(-50%);
+    transform: translateY(-50px);
 }
 .logo-section{
     text-align: center;
