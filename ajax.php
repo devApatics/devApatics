@@ -64,7 +64,7 @@ VALUES ('$name', '$company', '$email', '$phone' , '$city' , '$state' , '$check1'
 	{
 		$_SESSION['is_modal'] = 1; // Store value in seesion for Modal in blogs page 
 		$mail->setFrom($email); // sender email
-		$mail->addAddress($mail_user_name); // receiver email
+		$mail->addAddress($to_admin_email); // receiver email
 		$mail->isHTML(true);
 		$mail->Subject = 'Info Request';
 
