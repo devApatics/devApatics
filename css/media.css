@@ -204,6 +204,8 @@
         margin-left: 0px;
     }.img_1_class{
         margin-bottom: 10px;
+    }.risk-reduce-title br{
+        display: none;
     }
 }
 @media only screen and (max-width: 600px){
