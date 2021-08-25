@@ -141,6 +141,10 @@
     }.set_content{
         display: inline !important;
         text-align: center;
+    }.padding_bg_dark_responsive{
+        padding: 30px;
+        padding-top: 49px;
+        padding-left: 30px;
     }
 }
 @media only screen and (max-width: 767px){ 
