@@ -173,6 +173,7 @@ ul{
     top: 171px;
     bottom: auto;
     right: 0;
+    transform: translateY(-50%);
 }
 .logo-section{
     text-align: center;
