@@ -126,6 +126,10 @@
         margin-top: 30px;
     }.show_hide_br{
         display: none;
+    }.health-tip-title{
+        padding: 0px;
+    }.sanctioned{
+        top: 92px;
     }
 }
 @media only screen and (max-width: 768px){
@@ -155,6 +159,13 @@
     }.blog_1_quote_27::after {
         right: 144px;
         top: 17px;
+    }.sanctioned{
+        top: 175px;
+    }
+}
+@media only screen and (min-width: 768px){
+    .desk_hide{
+        display: none;
     }
 }
 @media only screen and (max-width: 767px){ 
@@ -226,11 +237,105 @@
         display: none;
     }.risk-detail{
         justify-content: center;
+        display: inline-grid !important;
+        text-align: center;
+    }.health-tips{
+        border-bottom: 4px solid #faa916;
+    }.health-tip-title{
+        padding: 0px;
+    }.hide_mobile{
+        display: none;
+    }.network-provider p{
+        font-size: 20px;
+        max-width:595px;
+    }.automated-date{
+        border-top: 4px solid #FAA916;
+        border-bottom: 4px solid #FAA916;
+    }.cost-reduce-listing{
+        display: inline-grid !important;
+        text-align: center;
+    }.cost-reduce-listing .col-md-2{
+        max-width: 550px;
+    }.align_mobile{
+        text-align: center;
+    }.risk-detail img{
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }.risk-detail .details-block{
+        margin-left: 0px;
+    }.connect-with-us .contact-title h4{
+        text-align: center;
+    }.hide_mob{
+        display: none;
+    }.mobi_slider_1{
+        background-image: url("../images/mob_slider.png") !important;
+        height: 750px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        text-align: center;
+    }.break-seprator{
+        display: grid;
+        flex-wrap: wrap;
+        margin-top: auto;
+        margin: 0 auto;
+    }.slider-about-it{
+        margin-left: 0px;
+    }.signature-text{
+        margin-left: 0px; 
+    }.logo-section h6{
+        padding-left: 0px;
+    }.logo-section .powered{
+        padding-left: 0px;
+        margin-right: -63px;
+    }.important-text{
+        margin: 25px 0px 30px !important;
+    }.slider-image .separator{
+        margin: 10px 0 10px;
+    }.remove_relative{
+        position: unset !important;
+    }.slider-copyright-text{
+        bottom: 20px;
+    }.mobi_slider_2{
+        background-image: url(../images/mobi_slider_2.png) !important;
+        height: 750px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right center;
+        text-align: center; 
+    }.set_class_container{
+        height: 100%;
+    }.custom_slider{
+        margin: 20px auto;
+    }.custom_sep{
+        display: flex !important;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: center;
+        margin-top: auto;
+        height: 100%;
+        margin-top: 265px;
+    }.slider_height{
+        height: 100%;
+    }.custom_slider_about{
+        margin-top: auto !important;
+        margin-bottom: 0px;
+    }.sanctioned{
+        top: 295px;
+    }.logo-section h6{
+        justify-content: center;
+        text-align: left;
+        margin: 0 auto;
+        padding-left: 106px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }.slider_1_section h6{
+        padding-left: 104px;
     }
 }
 @media only screen and (max-width: 766px){
     .for_mob{
-        display: none;
+        display: block;
     }
 }
 @media only screen and (max-width: 600px){
@@ -308,8 +413,6 @@
         margin-top: 17px;
     }.t_margin_main .custom_margin_top{
         margin-top: 17px;
-    }.hide_mob{
-        display: none;
     }.for_mob{
         width: 100%;
         display: block;
@@ -429,6 +532,8 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
+    }.mobi_slider_1{
+        height: 725px;
     }
 }
 @media only screen and (max-width: 420px){
@@ -452,6 +557,15 @@
 @media only screen and (min-width: 767px){
     .for_mob{
         display: none;
+    }
+}
+@media only screen and (max-width: 360px){
+    .slider-copyright-text {
+        bottom: 10px;
+        right: 10px;
+    }.sanctioned{
+        top: 295px;
+        right: 60px;
     }
 }
 @media only screen and (max-width: 320px){
@@ -492,5 +606,10 @@
     }.blog_1_quote_27::after {
         top: 90px;
         left: 72px;
+    }.hide_320{
+        display: none;
+    }.sanctioned{
+        top: 295px;
+        right: 40px;
     }
 }

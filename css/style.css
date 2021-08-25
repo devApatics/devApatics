@@ -497,7 +497,7 @@ ul{
     letter-spacing: 0.4px;
 } 
 .address-section ul li span{
-    color: #FAA916;
+    color: #FAA916 !important;
     margin: 0 10px;
 } 
 .address-section p{
@@ -946,7 +946,7 @@ ul{
     line-height: 21px;
 }
 .pad_set_adjust .col_font_set{
-    line-height: 18px; 
+    line-height: 22px; 
     margin-bottom: 14px;
 }
 .title_clean{
