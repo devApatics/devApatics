@@ -1141,7 +1141,7 @@ ul{
     margin-bottom: 14px;
 }
 .last_para h5{
-    color: rgba(0, 0, 0, 0.5);
+    color: #000000CC;
     font-size: 14px;
     font-family: 'Montserrat-Bold';
     letter-spacing: 0px;
@@ -1163,12 +1163,11 @@ ul{
   line-height: 18px;
   margin-bottom: 14px;
 }
-.bg_color_change{
-    background-color: #000000CC;
-    padding: 15px;
+ .bg_color_change{
+    color: #000000CC;
 }
-.set_margin_top_para{
-    margin-top: 14px !important;
+.bg_color_change p{
+    color: #000000CC;
 }
 /* News_1 page ends */
 /* Blog_1 page css starts */
