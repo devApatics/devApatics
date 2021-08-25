@@ -131,6 +131,9 @@
     }.sanctioned{
         top: 92px;
     }
+    .contact-modal .modal-content{
+        padding: 48px 15px 36px 15px;
+    }
 }
 @media only screen and (max-width: 768px){
     .res_query{
@@ -332,6 +335,13 @@
     }.slider_1_section h6{
         padding-left: 104px;
     }
+    .g-recaptcha{
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    div#captcha_msg{
+        margin-top: 0;
+    }
 }
 @media only screen and (max-width: 766px){
     .for_mob{
@@ -481,6 +491,7 @@
         margin-top: 40px;
     }.cost-reduce-listing .col-md-2{
         margin-bottom: 40px;
+        padding: 0px 15px;
     }.network-detection h4{
         font-size: 17px;
         line-height: 22px;
@@ -519,15 +530,15 @@
         padding-right: 17px;
         text-align: center;
     }.connect-option-selection{
-        padding-left: 31px;
-        padding-right: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
     }.connect-option-selection ul{
         margin-bottom: 40px;
         margin-top: 40px;
     }.contact-details{
         margin-top: 45px;
     }.contact-details img{
-        margin-bottom: 40px;
+        margin-bottom: 0px;
     }.custom-header .navbar{
         display: flex;
         flex-direction: row-reverse;
