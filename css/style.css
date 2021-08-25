@@ -1813,3 +1813,6 @@ div#captcha_msg {
     margin-bottom: 2px;
     display: block;
 }
+.custom_sep .logo-section img{
+    display: block;
+}

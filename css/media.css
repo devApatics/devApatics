@@ -44,6 +44,10 @@
 }
 
 @media only screen and (max-width: 991px){
+    .clain_slide .container{
+        max-width: 100%;
+        
+    }
     .custom-header .navbar-nav .nav-item .nav-link{
         margin-left: 0;
         padding: 10px 0;
