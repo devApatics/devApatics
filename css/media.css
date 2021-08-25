@@ -133,6 +133,9 @@
         padding-top: 20px;  
     }.custom-header .navbar a {
         margin-left: 15rem;
+    }.network-provider p{
+        font-size: 18px;
+        padding: 7px 7px 7px;
     }
 }
 @media only screen and (max-width: 767px){ 
@@ -326,10 +329,10 @@
     }.health-counter h4{
         font-weight: bold;
         text-align: center;
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 17PX;
+        padding-right: 17PX;
         margin-bottom: 30px;
-        margin-top: 40px;
+        margin-top: 30px;
     }.automated-date .risk-reduce-title{
         padding-left: 17px;
         padding-right: 17px;
