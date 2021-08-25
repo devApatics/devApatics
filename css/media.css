@@ -136,6 +136,8 @@
     }.network-provider p{
         font-size: 18px;
         padding: 7px 7px 7px;
+    }.slider-title br{
+        display: none;
     }
 }
 @media only screen and (max-width: 767px){ 
