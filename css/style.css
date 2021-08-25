@@ -225,6 +225,7 @@ ul{
 }
 .important-text span{
     color: #FAA916;
+    margin-right: 4px;
 }
 .logo-section h6{
     padding-left: 35px;
@@ -618,6 +619,7 @@ ul{
 }
 .news-story-writer img{
     max-width: 350px;
+    width: 100%;
 }
 .click,.click:hover{
     font-size: 14px;
