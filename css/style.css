@@ -1143,7 +1143,7 @@ ul{
     font-size: 18px;
     font-family: 'Montserrat-Bold';
     text-align: left;
-    line-height: 18px;
+    line-height: 22px;
     margin-bottom: 14px;
 }
 .last_para h5{
@@ -1152,6 +1152,7 @@ ul{
     font-family: 'Montserrat-Bold';
     letter-spacing: 0px;
     margin-bottom: 14px;
+    line-height: 18px;
 }
 .last_para h5 a,.last_para h5 a:hover{
     line-height: 18px;

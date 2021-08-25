@@ -152,6 +152,33 @@
     .bg_set_box{
         margin: 0 auto;
     }
+    .title_top_main_set h2{
+        color: #3379B0;
+        text-align: center;
+    }
+    .title_top_main_set{
+        background: none;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }.content_div_text{
+        padding-top: 0px;
+    }.content_div_text p {
+        text-align: center;
+    }.mobile_responsive_news_1{
+        text-align: center;
+    }.title_clean{
+        text-align: center;
+    }.blue_bg_dark h4{
+        text-align: center;
+    }.blue_bg_dark p{
+        text-align: center;
+    }.last_para h3{
+        text-align: center;
+    }.last_para{
+        text-align: center;
+    }.bg_color_change p{
+        text-align: center;
+    }
 }
 @media only screen and (max-width: 768px){
     .res_query{
