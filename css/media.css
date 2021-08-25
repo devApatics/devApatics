@@ -152,6 +152,9 @@
         padding: 30px;
         padding-top: 49px;
         padding-left: 30px;
+    }.blog_1_quote_27::after {
+        right: 144px;
+        top: 17px;
     }
 }
 @media only screen and (max-width: 767px){ 
@@ -268,14 +271,24 @@
         display: none;
     }
 }
+@media only screen and (max-width: 488px){
+    .title_set_stop br {
+        display: none;
+    }
+}
+@media only screen and (max-width: 483px){
+    .blog_1_quote br{
+        display: none;
+    }.blog_1_quote::after{
+        top: -5px;
+        left: 16px;
+    }.blog_1_quote_27 br{
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 460px){
-    .blog_1_quote::after{
-        top: 111px;
-        left: 152px;
-    }.blog_1_quote_27::after{
-        top: 133px;
-        left: 261px;
-    }.t_margin_main .title_container{ 
+    .t_margin_main .title_container{ 
         padding-top: 32px;
         text-align: center;
     }.main_title_solutions{
@@ -418,6 +431,24 @@
         justify-content: flex-end;
     }
 }
+@media only screen and (max-width: 420px){
+.blog_1_quote::after {
+    top: -7px;
+    left: 135px;
+    }.blog_1_quote_27::after{
+        top: 82px;
+        left: 84px;
+    }
+}
+@media only screen and (max-width: 375px){
+.blog_1_quote::after {
+    top: 16px;
+    left: 16px;
+    }.blog_1_quote_27::after{
+    top: 82px;
+    left: 190px;
+    }
+}
 @media only screen and (min-width: 767px){
     .for_mob{
         display: none;
@@ -448,5 +479,18 @@
     }.healthcare_box_set::after{
         top: 89px;
         left: 80px;
+    }.blog_1_quote::after {
+        top: 14px;
+        left: 72px;
+    }.pos_relative_set {
+        position: relative;
+        padding-left: 30px;
+        padding: 31px;
+    }.blog_1_quote_27::before{
+        top: 12px;
+        left: 0px;
+    }.blog_1_quote_27::after {
+        top: 90px;
+        left: 72px;
     }
 }

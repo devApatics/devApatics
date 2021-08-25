@@ -1201,10 +1201,10 @@ font-size: 14px;
 
 }
 .blue_pad_set{
-    padding-top: 21px;
+    padding-top: 16px;
     padding-left: 29px;
     padding-right: 31px;
-    padding-bottom: 21px;
+    padding-bottom: 17px;
 }
 .blue_box h2{
     font-size: 18px;
@@ -1251,7 +1251,7 @@ font-size: 14px;
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
-    top: 25px;
+    top: 26px;
     left: 113px;
     color: #FAA916;
     position: absolute !important;
@@ -1263,7 +1263,7 @@ font-size: 14px;
     height: 96px;
     display: inline-block;
     background-size: contain;
-    top: 12px;
+    top: 14px;
     left: auto;
     right: 261px;
     color: #FAA916;
@@ -1281,7 +1281,7 @@ font-size: 14px;
     background-size: contain;
     background-repeat: no-repeat;
     top: -20px;
-    left: -7px;
+    left: -4px;
     color: #FAA916;
     position: absolute !important;
 }
@@ -1292,13 +1292,16 @@ font-size: 14px;
     height: 96px;
     display: inline-block;
     background-size: contain;
-    top: -32px;
-    left: 278px;
+    top: -28px;
+    left: 275px;
     color: #FAA916;
     position: absolute !important;
     /* transform: rotate(
 -180deg
 ); */
+}
+.blue_pad_set p{
+    margin-top: 10px;
 }
 .healthcare_box_set::before{
     content: "";
