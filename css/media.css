@@ -206,6 +206,8 @@
         margin-bottom: 10px;
     }.risk-reduce-title br{
         display: none;
+    }.risk-detail{
+        justify-content: center;
     }
 }
 @media only screen and (max-width: 600px){
