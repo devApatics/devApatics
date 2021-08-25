@@ -61,7 +61,7 @@ VALUES ('$name', '$company', '$email', '$phone' , '$city' , '$state' , '$check1'
 	if (mysqli_query($conn, $sql)) // Store data in table.
 	{
 		$mail->setFrom($email); // sender email
-		$mail->addAddress($mail_user_name); // receiver email
+		$mail->addAddress($to_admin_email); // receiver email
 		$mail->isHTML(true);
 		$mail->Subject = 'Info Request';
 		
