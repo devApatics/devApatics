@@ -619,7 +619,7 @@ ul{
     font-family: 'Montserrat-Regular';
 }
 .news-story-writer img{
-    max-width: 350px;
+    /* max-width: 350px; */
     width: 100%;
 }
 .click,.click:hover{
@@ -1147,11 +1147,11 @@ ul{
     margin-bottom: 14px;
 }
 .last_para h5{
-    color: #000000CC;
+    color: rgba(0, 0, 0, 0.5);
     font-size: 14px;
     font-family: 'Montserrat-Bold';
     letter-spacing: 0px;
-    margin-bottom: 14px;
+    margin-bottom: 5px;
     line-height: 18px;
 }
 .last_para h5 a,.last_para h5 a:hover{
@@ -1167,8 +1167,8 @@ ul{
   font-family: 'Montserrat-Regular';
   letter-spacing: 0.21px;
   color: #00000099;
-  line-height: 18px;
-  margin-bottom: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
 }
  .bg_color_change{
     color: #000000CC;
@@ -1182,7 +1182,7 @@ ul{
     font-size: 18px;
     color: #3379B0;
     text-align: left;
-    line-height: 20px;
+    line-height: 22px;
     font-family: 'Montserrat-Bold';
 }
 .para_adjust{
@@ -1219,7 +1219,7 @@ font-size: 14px;
     letter-spacing: 0px;
 color: #3379B0;
 font-family: 'Montserrat-Bold';
-max-width: 600px;
+max-width: 635px;
 margin: 0 auto;
 }
 .blue_box p{
@@ -1239,9 +1239,10 @@ font-size: 14px;
 .title_middle_set_margin{
     display: block;
     position: relative;
-    padding-left: 30px;
-    max-width: 430px !important;
+    padding-left: 0px;
+    max-width: 671px !important;
     margin: 0 auto 15px;
+    text-align: center;
 }
 .blue_box .blockquote{
     display: block;
@@ -1250,7 +1251,39 @@ font-size: 14px;
     max-width: 606px;
     margin: 0 auto 15px;
 }
-.blog_1_quote_27::before{
+.blog_1_quote .top{
+    margin-bottom: 14px;
+    margin-right: 5px;
+}
+.blog_1_quote .bottom{
+    margin-bottom: -9px;
+    margin-left: 5px;
+}
+.blog_1_quote_27 .top{
+    margin-top: -16px;
+    margin-right: 5px;
+}
+.blog_1_quote_27 .bottom{
+    margin-bottom: -10px;
+    margin-left: 5px;
+}
+.healthcare_box_set .top{
+    margin-top: -15px;
+    margin-right: 5px;
+}
+.healthcare_box_set .bottom{
+    margin-bottom: -7px;
+    margin-left: 6px;
+}
+.quote_left .top{
+    margin-top: -15px;
+    margin-right: 5px;
+}
+.quote_left .bottom{
+    margin-bottom: -15px;
+    margin-left: 5px;
+}
+/* .blog_1_quote_27::before{
     content: "";
     background-image: url(../images/left.png);
     width: 96px;
@@ -1275,11 +1308,9 @@ font-size: 14px;
     right: 261px;
     color: #FAA916;
     position: absolute !important;
-    /* transform: rotate(
--180deg
-); */
-}
-.blog_1_quote::before{
+   
+} */
+/* .blog_1_quote::before{
     content: "";
     background-image: url(../images/left.png);
     width: 96px;
@@ -1303,14 +1334,12 @@ font-size: 14px;
     left: 275px;
     color: #FAA916;
     position: absolute !important;
-    /* transform: rotate(
--180deg
-); */
-}
+    
+} */
 .blue_pad_set p{
     margin-top: 10px;
 }
-.healthcare_box_set::before{
+/* .healthcare_box_set::before{
     content: "";
     background-image: url(../images/left.png);
     width: 96px;
@@ -1332,11 +1361,8 @@ font-size: 14px;
     top: 23px;
     left: 211px;
     position: absolute !important;
-    /* transform: rotate( 
--180deg
- ); */
     color: #FAA916;
-}
+} */
 .blue_box .blockquote::after{
     content: '\201d';
     bottom: -18px;
@@ -1350,7 +1376,7 @@ font-size: 14px;
 .margin_top_set_blue{
     margin-top: 50px;
 }
-.quote_left::before{
+/* .quote_left::before{
     content: "";
     background-image: url(../images/left.png);
     width: 96px;
@@ -1372,17 +1398,11 @@ font-size: 14px;
     top: 69px;
     left: 91px;
     position: absolute !important;
-    /* transform: rotate( 
--180deg
- ); */
     color: #FAA916;
-}
+} */
 .pos_rel{
     position: relative  !important;
-    padding-bottom: 31px  !important;
-    padding-top: 31px  !important;
-    /* margin: 0 auto; */
-    padding-left: 55px  !important;
+    padding: 30px !important
 }
 .sol_para{
     text-align: left;
@@ -1448,7 +1468,7 @@ font-family: 'Montserrat-Bold';
     font-size: 18px;
     font-family: 'Montserrat-Bold';
     color: #3379B0;
-
+    line-height: 22px;
 }
 .pad_new{
     padding-top: 5px;
@@ -1519,7 +1539,7 @@ letter-spacing: 0.18px;
     display: block;
     position: relative;
     padding-left: 30px;
-    max-width: 322px !important;
+    max-width: 375px !important;
     margin: 0 auto 15px;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -1740,7 +1760,7 @@ div#captcha_msg {
     margin: 10px 0;
 }
 .company-news .big_title{
-    line-height: 20px;
+    line-height: 22px;
 }
 .company-news .color_change{
     color: rgb(0, 0, 0, 0.5);

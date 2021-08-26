@@ -155,6 +155,7 @@
     }
     .blog-detail .blue_pad_set.blue_box{
         margin: 25px auto 20px;
+        text-align: center;
     }
     .power_blue_box_mar_top{
         padding: 0px;
@@ -220,7 +221,21 @@
         text-align: left !important;
     }
     .quote_left{
-        max-width: 350px !important;
+        max-width: 365px !important;
+    }.blog_1_quote{
+        padding: 0px;
+    }.blog_1_quote_27, .blog-detail-subtitle{
+        text-align: center !important;
+    }.info{
+        text-align: left !important;
+    }.mobile_responsive_news_1 .text_para{
+        text-align: left;
+        margin-bottom: 10px;
+    }.right_text_font{
+        text-align: left;
+        padding: 0px;
+    }.responsive_space_bottom{
+        margin-bottom: 30px !important;
     }
 }
 @media only screen and (max-width: 768px){
@@ -241,7 +256,7 @@
     }.slider-title br{
         display: none;
     }.set_content{
-        display: inline !important;
+        /* display: inline !important; */
         text-align: center;
     }.padding_bg_dark_responsive{
         padding: 30px;
@@ -458,6 +473,12 @@
         right: 95px;
     }.para_text_26.mar_custom_para.blog-detail-subtitle{
         margin-top: 0px !important;
+    }.main_title_news br{
+        display: none;
+    }.title_top_main_set br{
+        display: none;
+    }.responsive_mt{
+        margin-top: 30px;
     }
 }
 @media only screen and (max-width: 766px){
@@ -524,6 +545,9 @@
         margin-top: 20px !important;
     }.show_hide_br{
         display: none;
+    }.bg_set_box{
+        max-width: 350px;
+        margin: 10px auto !important;
     }
 }
 @media only screen and (max-width: 400px){
@@ -709,9 +733,9 @@
 }
 @media only screen and (max-width: 435px){
     .quote_left::before {
-        left: 54px !important;
+        left: 49px !important;
     }.quote_left::after {
-        left: 194px !important;
+        left: 179px !important;
         top: 70px !important;
     }
 }
@@ -733,9 +757,9 @@
     top: 82px;
     left: 190px;
     }.quote_left::before {
-        left: 44px !important;
+        left: 30px !important;
     }.quote_left::after {
-        left: 185px !important;
+        left: 161px !important;
         top: 70px !important;
     }
 }
@@ -756,6 +780,9 @@
     }.quote_left::after {
         left: 154px !important;
         top: 70px !important;
+    }.bg_set_box{
+        max-width: 300px;
+        margin: 10px auto !important;
     }
 }
 @media only screen and (max-width: 345px){
@@ -771,7 +798,7 @@
         font-size: 13px;
     }  
     .bg_set_blue {
-        height: 470px !important;
+        /* height: 470px !important; */
     }
     .main_title_news{
         font-size: 13px;
@@ -789,15 +816,15 @@
     }.quote_left::after{
         left: 132px !important;
     }.healthcare_box_set::after{
-        top: 89px;
-        left: 80px;
+        top: 45px;
+        left: 118px;
     }.blog_1_quote::after {
         top: 14px;
         left: 72px;
     }.pos_relative_set {
         position: relative;
         padding-left: 30px;
-        padding: 31px;
+        padding: 20px;
     }.blog_1_quote_27::before{
         top: 12px;
         left: 0px;
@@ -812,5 +839,7 @@
     }
     .comp_news_mar_top{
         height: 330px !important;
+    }.healthcare_box_set br{
+        display: none;
     }
 }
