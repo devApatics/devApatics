@@ -42,7 +42,11 @@
         left: 66px;
     }    
 }
-
+@media only screen and (max-width: 875px){
+    .sanctioned {
+        top: 185px !important;
+    }
+}
 @media only screen and (max-width: 991px){
     .clain_slide .container{
         max-width: 100%;
@@ -134,7 +138,7 @@
     }.health-tip-title{
         padding: 0px;
     }.sanctioned{
-        top: 92px;
+        top: 230px;
     }
     .contact-modal .modal-content{
         padding: 48px 15px 36px 15px;
@@ -468,10 +472,35 @@
          display: none;
      }
  }
+ @media only screen and (max-width: 520px){
+    .quote_left::before {
+        left: 33px !important;
+    }.quote_left::after {
+        left: 318px  !important;
+        top: 24px  !important;
+    }
+ }
+ @media only screen and (max-width: 530px){
+    .pos_rel{
+        padding-left: 0px !important;
+    }.quote_left::before{
+        left: 44px;
+    }.quote_left::after{
+        left: 315px;
+        top: 24px;
+    }
+ }
 @media only screen and (max-width: 500px){
     .cost-reduce-listing .col-md-2{
         max-width: 100%;
         flex: 0 0 100%;
+    }.br_one{
+        display: block;
+    }.quote_left::after{
+        left: 300px !important;
+        top: 24px !important;
+    }.quote_left::before {
+        left: 24px !important;
     }
 }
 @media only screen and (max-width: 575px){
@@ -481,7 +510,15 @@
         display: none;
     }
 }
-@media only screen and (max-width: 488px){
+@media only screen and (max-width: 400px){
+    .quote_left::before {
+        left: 35px !important;
+    }.quote_left::after {
+        left: 175px !important;
+        top: 70px !important;
+    }
+}
+@media only screen and (max-width: 495px){
     .title_set_stop br {
         display: none;
     }
@@ -496,7 +533,16 @@
         display: none;
     }
 }
-
+@media only screen and (max-width: 485px){
+    .quote_left br{
+        display: block !important;
+    }.quote_left::before {
+        left: 75px !important;
+    }.quote_left::after {
+        left: 221px !important;
+        top: 70px !important;
+    }
+}
 @media only screen and (max-width: 460px){
     .t_margin_main .title_container{ 
         padding-top: 32px;
@@ -638,6 +684,19 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
+    }.quote_left::before {
+        left: 65px !important;
+    }.quote_left::after {
+        left: 210px !important;
+        top: 70px !important;
+    }
+}
+@media only screen and (max-width: 435px){
+    .quote_left::before {
+        left: 54px !important;
+    }.quote_left::after {
+        left: 194px !important;
+        top: 70px !important;
     }
 }
 @media only screen and (max-width: 420px){
@@ -649,6 +708,7 @@
         left: 84px;
     }
 }
+
 @media only screen and (max-width: 375px){
 .blog_1_quote::after {
     top: 16px;
@@ -656,6 +716,11 @@
     }.blog_1_quote_27::after{
     top: 82px;
     left: 190px;
+    }.quote_left::before {
+        left: 44px !important;
+    }.quote_left::after {
+        left: 185px !important;
+        top: 70px !important;
     }
 }
 @media only screen and (min-width: 767px){
@@ -670,6 +735,19 @@
     }.sanctioned{
         top: 295px;
         right: 60px;
+    }.quote_left::before {
+        left: 15px !important;
+    }.quote_left::after {
+        left: 154px !important;
+        top: 70px !important;
+    }
+}
+@media only screen and (max-width: 345px){
+    .quote_left::after {
+        left: 148px !important;
+        top: 70px !important;
+    }.quote_left::before {
+        left: 5px !important;
     }
 }
 @media only screen and (max-width: 320px){
@@ -689,11 +767,11 @@
     }.address-section ul{
         flex-wrap: wrap;
     }.pos_rel{
-        padding-left: 38px !important;
+        padding-left: 2px !important;
     }.quote_left::before{
-        left: 6px;
+        left: 5px !important;
     }.quote_left::after{
-        left: 72px;
+        left: 132px !important;
     }.healthcare_box_set::after{
         top: 89px;
         left: 80px;
