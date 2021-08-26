@@ -16,10 +16,13 @@
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
     <script src='https://www.google.com/recaptcha/api.js' async defer></script>
     <script>
+        
         jQuery(document).ready(function (jQuery) {
+            setTimeout(function(){
+            $(".navbar-toggler").addClass("collapsed");
+        },100)
             jQuery("#header").load("header.html");
             jQuery("#footer").load("footer.html");
-
             // For jQuery Validation
             $("#contact_form").validate({
                 rules: {
