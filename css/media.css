@@ -4,6 +4,9 @@
     .contact-details{
         justify-content: space-between;
     }
+    .web-hide{
+        display: none;
+    }
 }
 @media only screen and (max-width: 1245px){
     .sanctioned-slide .container{
@@ -142,6 +145,21 @@
     }
     .contact-modal .modal-content{
         padding: 48px 15px 36px 15px;
+    }
+    .blog-detail .pad_box_set,.blog-detail .text_common,.blog-detail .sol_para,.blog-detail .title_set_stop{
+        text-align: center;
+    }
+    .blog-detail .title_set_stop{
+        margin-top: 30px;
+    }
+    .mobile-hide{
+        display: none;
+    }
+    .blog-detail .blue_pad_set.blue_box{
+        margin: 25px auto 20px;
+    }
+    .power_blue_box_mar_top{
+        padding: 0px;
     }
     .news-first-section{
         text-align: center;
