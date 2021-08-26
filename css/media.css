@@ -45,7 +45,11 @@
         left: 66px;
     }    
 }
-
+@media only screen and (max-width: 875px){
+    .sanctioned {
+        top: 185px !important;
+    }
+}
 @media only screen and (max-width: 991px){
     .clain_slide .container{
         max-width: 100%; 
@@ -173,6 +177,7 @@
     }
     .blog-detail .blue_pad_set.blue_box{
         margin: 25px auto 20px;
+        text-align: center;
     }
     .power_blue_box_mar_top{
         padding: 0px;
@@ -238,7 +243,21 @@
         text-align: left !important;
     }
     .quote_left{
-        max-width: 350px !important;
+        max-width: 365px !important;
+    }.blog_1_quote{
+        padding: 0px;
+    }.blog_1_quote_27, .blog-detail-subtitle{
+        text-align: center !important;
+    }.info{
+        text-align: left !important;
+    }.mobile_responsive_news_1 .text_para{
+        text-align: left;
+        margin-bottom: 10px;
+    }.right_text_font{
+        text-align: left;
+        padding: 0px;
+    }.responsive_space_bottom{
+        margin-bottom: 30px !important;
     }
 }
 @media only screen and (max-width: 768px){
@@ -257,7 +276,7 @@
     }.slider-title br{
         display: none;
     }.set_content{
-        display: inline !important;
+        /* display: inline !important; */
         text-align: center;
     }.padding_bg_dark_responsive{
         padding: 30px;
@@ -474,6 +493,12 @@
         right: 95px;
     }.para_text_26.mar_custom_para.blog-detail-subtitle{
         margin-top: 0px !important;
+    }.main_title_news br{
+        display: none;
+    }.title_top_main_set br{
+        display: none;
+    }.responsive_mt{
+        margin-top: 30px;
     }
 }
 @media only screen and (max-width: 766px){
@@ -502,10 +527,35 @@
          display: none;
      }
  }
+ @media only screen and (max-width: 520px){
+    .quote_left::before {
+        left: 33px !important;
+    }.quote_left::after {
+        left: 318px  !important;
+        top: 24px  !important;
+    }
+ }
+ @media only screen and (max-width: 530px){
+    .pos_rel{
+        padding-left: 0px !important;
+    }.quote_left::before{
+        left: 44px;
+    }.quote_left::after{
+        left: 315px;
+        top: 24px;
+    }
+ }
 @media only screen and (max-width: 500px){
     .cost-reduce-listing .col-md-2{
         max-width: 100%;
         flex: 0 0 100%;
+    }.br_one{
+        display: block;
+    }.quote_left::after{
+        left: 300px !important;
+        top: 24px !important;
+    }.quote_left::before {
+        left: 24px !important;
     }
 }
 @media only screen and (max-width: 575px){
@@ -513,9 +563,20 @@
         margin-top: 20px !important;
     }.show_hide_br{
         display: none;
+    }.bg_set_box{
+        max-width: 350px;
+        margin: 10px auto !important;
     }
 }
-@media only screen and (max-width: 488px){
+@media only screen and (max-width: 400px){
+    .quote_left::before {
+        left: 35px !important;
+    }.quote_left::after {
+        left: 175px !important;
+        top: 70px !important;
+    }
+}
+@media only screen and (max-width: 495px){
     .title_set_stop br {
         display: none;
     }
@@ -530,7 +591,16 @@
         display: none;
     }
 }
-
+@media only screen and (max-width: 485px){
+    .quote_left br{
+        display: block !important;
+    }.quote_left::before {
+        left: 75px !important;
+    }.quote_left::after {
+        left: 221px !important;
+        top: 70px !important;
+    }
+}
 @media only screen and (max-width: 460px){
     .t_margin_main .title_container{ 
         padding-top: 32px;
@@ -670,7 +740,20 @@
         margin-bottom: 0px;
     }.custom-header .navbar{
         display: flex; 
-        justify-content: space-between;
+        justify-content: space-between; 
+    }.quote_left::before {
+        left: 65px !important;
+    }.quote_left::after {
+        left: 210px !important;
+        top: 70px !important;
+    }
+}
+@media only screen and (max-width: 435px){
+    .quote_left::before {
+        left: 49px !important;
+    }.quote_left::after {
+        left: 179px !important;
+        top: 70px !important;
     }
 }
 @media only screen and (max-width: 420px){
@@ -682,6 +765,7 @@
         left: 84px;
     }
 }
+
 @media only screen and (max-width: 375px){
 .blog_1_quote::after {
     top: 16px;
@@ -689,6 +773,11 @@
     }.blog_1_quote_27::after{
     top: 82px;
     left: 190px;
+    }.quote_left::before {
+        left: 30px !important;
+    }.quote_left::after {
+        left: 161px !important;
+        top: 70px !important;
     }
 }
 @media only screen and (min-width: 767px){
@@ -703,6 +792,22 @@
     }.sanctioned{
         top: 295px;
         right: 60px;
+    }.quote_left::before {
+        left: 15px !important;
+    }.quote_left::after {
+        left: 154px !important;
+        top: 70px !important;
+    }.bg_set_box{
+        max-width: 300px;
+        margin: 10px auto !important;
+    }
+}
+@media only screen and (max-width: 345px){
+    .quote_left::after {
+        left: 148px !important;
+        top: 70px !important;
+    }.quote_left::before {
+        left: 5px !important;
     }
 }
 @media only screen and (max-width: 320px){
@@ -710,7 +815,7 @@
         font-size: 13px;
     }  
     .bg_set_blue {
-        height: 470px !important;
+        /* height: 470px !important; */
     }
     .main_title_news{
         font-size: 13px;
@@ -720,21 +825,21 @@
     }.address-section ul{
         flex-wrap: wrap;
     }.pos_rel{
-        padding-left: 38px !important;
+        padding-left: 2px !important;
     }.quote_left::before{
-        left: 6px;
+        left: 5px !important;
     }.quote_left::after{
-        left: 72px;
+        left: 132px !important;
     }.healthcare_box_set::after{
-        top: 89px;
-        left: 80px;
+        top: 45px;
+        left: 118px;
     }.blog_1_quote::after {
         top: 14px;
         left: 72px;
     }.pos_relative_set {
         position: relative;
         padding-left: 30px;
-        padding: 31px;
+        padding: 20px;
     }.blog_1_quote_27::before{
         top: 12px;
         left: 0px;
@@ -749,5 +854,7 @@
     }
     .comp_news_mar_top{
         height: 330px !important;
+    }.healthcare_box_set br{
+        display: none;
     }
 }

@@ -66,7 +66,9 @@ VALUES ('$name', '$company', '$email', '$phone' , '$city' , '$state' , '$check1'
 		$mail->Subject = 'Info Request';
 		
 		// Mail body content 
-		$bodyContent = '<h3>Details</h3>';
+		$mail->addEmbeddedImage('images/email_logo.png', 'image_cid');
+		$bodyContent = '<img src="cid:image_cid" alt="Image" style="display: block;margin: 0 auto;"/>';
+		$bodyContent .= '<h3>Details</h3>';
 		$bodyContent .= '<ul><li>Name:' . $name . '</li>
 		<li>Company: ' . $company . '</li>
 		<li>Phone: ' . $phone . '</li>
@@ -108,8 +110,12 @@ VALUES ('$name', '$company', '$email', '$phone' , '$city' , '$state' , '$check1'
 
 			// Mail body content 
 			// $bodyContent = '<h3>Thank you for connecting with us !</h3>';
-			$bodyContent = '<p>Thank you for contacting APATICS where we are committed to delivering automated data insights that immediately and continuously reduce risk to improve healthcare financial and clinical performance.</p>';
+			$mail->addEmbeddedImage('images/email_logo.png', 'image_cid');
+			$bodyContent = '<img src="cid:image_cid" alt="Image" style="display: block;margin: 0 auto;"/>';
+			$bodyContent .= '<h4>Hi, '.$name.'</h4>';
+			$bodyContent .= '<p>Thank you for contacting APATICS where we are committed to delivering automated data insights that immediately and continuously reduce risk to improve healthcare financial and clinical performance.</p>';
 			$bodyContent .= '<p>A member of our executive team will contact you within the next 24 hours to schedule a demonstration at your convenience. We look forward to speaking with you soon.</p>';
+			
 
 			$mail->Body = $bodyContent;
 
