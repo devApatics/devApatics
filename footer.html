@@ -8,6 +8,10 @@
             }).filter(function(){
                 return window.location.href.indexOf($(this).attr('href').trim()) > -1;
             }).click();
+            setTimeout(function () {
+                $(".navbar-toggler").addClass("collapsed");
+                $('.toggle-close-button').addClass('collapsed')
+            }, 100)
         });
     </script>
 </footer>

@@ -1118,7 +1118,7 @@ ul{
     color: #fff;
     letter-spacing: 0px;
     font-size: 18px;
-    line-height: 18px;
+    line-height: 22px;
     text-align: left;
     font-family: 'Montserrat-Bold';
 }
@@ -1715,6 +1715,20 @@ div#captcha_msg {
 .blog-detail .powerful-fraud{
     padding-bottom: 24px;
 }
+.blog-detail .powerful-fraud h2.font-italic{
+    max-width: 100%;
+}
+.blog-detail .powerful-fraud p.blog-detail-subtitle{
+    margin-top: 21px !important;
+}
+.blog-detail .blue_pad_set.blue_box p{
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.8);
+    font-family: 'Montserrat-Regular';
+    letter-spacing: 0.21px;
+    margin: 21px 0 0;
+}
 .blog-detail .mar_top_up_30{
     margin-top: 30px;
 }
@@ -1836,4 +1850,7 @@ div#captcha_msg {
 }
 .custom_sep .logo-section img{
     display: block;
+}
+.study-proved h5{
+    margin-bottom: 10px;
 }

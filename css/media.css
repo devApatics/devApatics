@@ -33,6 +33,10 @@
     .info{
         padding-top: 12px;
     }
+    .blatant-anomalies.blue_box{
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
     .padd_sett{
         padding: 5px;
     }.pos_rel{
@@ -62,7 +66,7 @@
     .custom-header .navbar button.collapsed.navbar-toggler{  
         opacity: 1;
     }
-    .toggle-close-button{
+    .toggle-close-button.collapsed{
         visibility: hidden;
     }
     .custom-header .navbar button.navbar-toggler{
@@ -76,7 +80,7 @@
         width: 100%;
         padding: 37px 17px 10px;
         top: -100%;
-        transition: all ease-in-out 0.3s;
+        transition: all ease-in-out 0.1s;
     }
     .custom-header .navbar-collapse.show{
         top: 42px;
@@ -141,6 +145,7 @@
         display: flex; 
         justify-content: space-between;
         max-width: 100%;
+        height: 45px;
     }.pad_set_adjust {
         padding-right: 15px;
     }.pad_set_adjust_left {
@@ -214,7 +219,12 @@
         text-align: center;
     }.blue_bg_dark h4{
         text-align: center;
-    }.blue_bg_dark p{
+    }
+    .story-modal .blue_bg_dark h4{
+        font-size: 14px;
+        line-height: 20px; 
+    }
+    .blue_bg_dark p{
         text-align: center;
     }.last_para h3{
         text-align: center;
@@ -311,6 +321,12 @@
     }
 	.content_div_text{
         padding: 15px;
+    }
+    .story-modal .content_div_text{
+        padding-top: 0px;
+    }
+    .story-modal .title_top_main_set{
+        padding-top: 30px;
     }
 	.title_top_main_set{
         padding: 15px;
@@ -500,6 +516,20 @@
     }.responsive_mt{
         margin-top: 30px;
     }
+    .blog-detail .powerful-fraud {
+        padding-bottom: 45px;
+    }
+    .healthcare_box_set{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .blatant-anomalies.blue_box{
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .blog-detail .blue_pad_set.blue_box{
+        padding: 26px 12px 25px;
+    }
 }
 @media only screen and (max-width: 766px){
     
@@ -566,6 +596,9 @@
     }.bg_set_box{
         max-width: 350px;
         margin: 10px auto !important;
+    } 
+    .blatant-anomalies.blue_box .font-italic br{
+        display: none !important;
     }
 }
 @media only screen and (max-width: 400px){
