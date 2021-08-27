@@ -47,6 +47,8 @@
     }.quote_left::after{
         top: 72px;
         left: 66px;
+    }.white_paper_paragraph{
+        margin-bottom: 81px;
     }    
 }
 @media only screen and (max-width: 875px){
@@ -268,6 +270,8 @@
         padding: 0px;
     }.responsive_space_bottom{
         margin-bottom: 30px !important;
+    }.white_paper_paragraph {
+        margin-bottom: 42px;
     }
 }
 @media only screen and (max-width: 768px){
@@ -529,6 +533,8 @@
     }
     .blog-detail .blue_pad_set.blue_box{
         padding: 26px 12px 25px;
+    }.white_paper_paragraph {
+        margin-bottom: 81px;
     }
 }
 @media only screen and (max-width: 766px){
@@ -599,6 +605,8 @@
     } 
     .blatant-anomalies.blue_box .font-italic br{
         display: none !important;
+    }.white_paper_paragraph {
+        margin-bottom: 42px;
     }
 }
 @media only screen and (max-width: 400px){

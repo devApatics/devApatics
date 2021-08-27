@@ -894,6 +894,15 @@ ul{
 .comp_mar_top_text{
     margin-bottom: 5px;
 }
+.white_paper_paragraph{
+    padding-top: 14px;
+    padding-bottom: 20px;
+    margin-bottom: 42px;
+    color: #1F496A;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
 .set_coming{
     transform: matrix(0.85, -0.53, 0.53, 0.85, 0, 0);
     text-align: center;
