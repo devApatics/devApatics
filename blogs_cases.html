@@ -16,11 +16,20 @@
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
     <script src='https://www.google.com/recaptcha/api.js' async defer></script>
     <script>
-        jQuery(document).ready(function (jQuery) {
+        jQuery(document).ready(function(jQuery) {
             jQuery("#header").load("header.html");
             jQuery("#footer").load("footer.html");
             jQuery("#footer1").load("footer.html");
             jQuery("#footer2").load("footer.html");
+
+            //For load site_key
+            $.ajax({
+                type: 'GET',
+                url: 'site_key.php',
+                success: function(response) {
+                    $("#captcha").attr('data-sitekey', response);
+                }
+            });
 
             // For jQuery Validation
             $("#contact_form").validate({
@@ -73,7 +82,7 @@
             });
 
             // For check google captcha checked or not
-            $('#submit').click(function () {
+            $('#submit').click(function() {
                 var $captcha = $('#g-recaptcha-response'),
                     response = grecaptcha.getResponse();
 
@@ -97,7 +106,7 @@
                     type: 'POST',
                     url: 'ajax.php',
                     data: data,
-                    success: function (response) {
+                    success: function(response) {
                         console.log(response);
                         $('#loading-image').hide();
                         if (response == '1') {
@@ -124,9 +133,9 @@
             }
 
             // For Checkbox validation
-            $(function () {
+            $(function() {
                 var requiredCheckboxes = $('.options :checkbox[required]');
-                requiredCheckboxes.change(function () {
+                requiredCheckboxes.change(function() {
                     if (requiredCheckboxes.is(':checked')) {
                         requiredCheckboxes.removeAttr('required');
                     } else {
@@ -136,7 +145,7 @@
             });
 
             // For Modal check if its form already submitted or not
-            $(".check_session").click(function (e) {
+            $(".check_session").click(function(e) {
                 e.preventDefault();
                 id = $(this).attr("data-id");
                 $.ajax({
@@ -145,7 +154,7 @@
                     data: {
                         'id': id
                     },
-                    success: function (result) {
+                    success: function(result) {
                         if (result == 0) {
                             window.open('PDF/PDM.pdf', '_blank');
                         } else if (result == 1) {
@@ -154,7 +163,7 @@
                             $('#contact_modal').modal('show')
                         }
                     },
-                    error: function (result) {
+                    error: function(result) {
                         alert('error');
                     }
                 });
@@ -163,8 +172,8 @@
 
 
         // For set the value of hidden field of modal popup clicked.
-        $(function () {
-            $(".set_color_font_click").click(function () {
+        $(function() {
+            $(".set_color_font_click").click(function() {
                 var my_id_value = $(this).data('id');
                 $("#category_name").val(my_id_value);
             })
@@ -223,8 +232,7 @@
                             <p class="white_paper_paragraph">The Necessity and Value of Automating Provider Data Management</p>
                             <!-- <p class="mt-3 font_color_new set_coming">COMING SOON</p> -->
                             <div class="div_center">
-                                <a href="#" class=" set_color_font_click check_session" data-id="provider" />CLICK TO
-                                READ STORY</a>
+                                <a href="#" class=" set_color_font_click check_session" data-id="provider" />CLICK TO READ STORY</a>
                             </div>
                         </div>
                     </div>
@@ -253,8 +261,7 @@
     <!-- Footer -->
 
     <!-- Blog Article 1 story -->
-    <div class="modal story-modal modal-bottom fade" id="dimitri_arges" role="dialog"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal story-modal modal-bottom fade" id="dimitri_arges" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="container blog_1_margin_top blog-detail">
@@ -270,25 +277,17 @@
                             </h2>
                             <h4 class="text_color">Dimitri Arges</h4>
                             <p class="para_adjust">
-                                Surfers talk a lot about sets, groups of waves that keep coming one behind the other.
-                                While that may be a surfer’s dream, the continuous cadence of telehealth fraud, waste
-                                and abuse stories is looking more like sets of tsunamis coming one after the other.
+                                Surfers talk a lot about sets, groups of waves that keep coming one behind the other. While that may be a surfer’s dream, the continuous cadence of telehealth fraud, waste and abuse stories is looking more like sets of tsunamis coming one after the other.
                             </p>
                             <p class="para_adjust">
-                                The dollar amounts of charges brought by the U.S. Department of Justice for telehealth
-                                and telemedicine fraud are staggering. Indictments for $4.5 billion and $1.2 billion are
-                                just the tip of the iceberg in a telemedicine market that is growing by 26.5
-                                percent per year and expected to reach $475 billion by 2026. It’s a big market with a
-                                big fraud, waste and abuse problem.
+                                The dollar amounts of charges brought by the U.S. Department of Justice for telehealth and telemedicine fraud are staggering. Indictments for $4.5 billion and $1.2 billion are just the tip of the iceberg in a telemedicine market that is growing by 26.5
+                                percent per year and expected to reach $475 billion by 2026. It’s a big market with a big fraud, waste and abuse problem.
                             </p>
                             <div class="text_common web-hide">
-                                <h4 class="text_color margin-top_new blog-detail-title">The Common Characteristics of Telehealth
-                                    Fraud, Waste and Abuse
+                                <h4 class="text_color margin-top_new blog-detail-title">The Common Characteristics of Telehealth Fraud, Waste and Abuse
                                 </h4>
                                 <p class="blog-detail-subtitle">
-                                    When examining some of the telehealth or telemedicine indictments a few common
-                                    characteristics scream off the page. Relationships between dishonest doctors, pharmacies,
-                                    labs and equipment or supplies providers are endemic in almost every case. In short,
+                                    When examining some of the telehealth or telemedicine indictments a few common characteristics scream off the page. Relationships between dishonest doctors, pharmacies, labs and equipment or supplies providers are endemic in almost every case. In short,
                                     collusion between bad actors is part of each major fraud case.
                                 </p>
                             </div>
@@ -297,57 +296,39 @@
                                     <img src="./images/left-quote_y.png" class="img_size" />
                                 </sup> -->
                                 <h2 class="font-italic  title_middle_set_margin blog_1_quote">
-                                    <img src="images/left.png" alt="Quote" class="top" />In short, collusion between bad actors
-                                    is part of each major fraud case.<img src="images/right.png" alt="Quote"class="bottom"  />
+                                    <img src="images/left.png" alt="Quote" class="top" />In short, collusion between bad actors is part of each major fraud case.<img src="images/right.png" alt="Quote" class="bottom" />
                                 </h2>
                                 <!-- <sup class="vert_align">
                                     <img src="./images/left-quote_y.png" class="img_size img_rotate" />
                                 </sup> -->
 
                                 <p>
-                                    The other common characteristic is that it does not require very many fraudulent
-                                    providers to do a lot of damage. In a Florida telehealth fraud case announced May 3,
-                                    2021, the Department of Justice charged only three men in a $47 million healthcare
-                                    fraud,
-                                    kickback and money laundering scheme. In the $4.5 billion case referenced above, 86
-                                    providers were charged. And the $1.2 billion case involved only 24 people. Those are
-                                    all very tightknit groups of providers united
+                                    The other common characteristic is that it does not require very many fraudulent providers to do a lot of damage. In a Florida telehealth fraud case announced May 3, 2021, the Department of Justice charged only three men in a $47 million healthcare fraud,
+                                    kickback and money laundering scheme. In the $4.5 billion case referenced above, 86 providers were charged. And the $1.2 billion case involved only 24 people. Those are all very tightknit groups of providers united
                                     to engage in telehealth fraud.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="text_common mobile-hide">
-                        <h4 class="text_color margin-top_new blog-detail-title">The Common Characteristics of Telehealth
-                            Fraud, Waste and Abuse
+                        <h4 class="text_color margin-top_new blog-detail-title">The Common Characteristics of Telehealth Fraud, Waste and Abuse
                         </h4>
                         <p class="blog-detail-subtitle">
-                            When examining some of the telehealth or telemedicine indictments a few common
-                            characteristics scream off the page. Relationships between dishonest doctors, pharmacies,
-                            labs and equipment or supplies providers are endemic in almost every case. In short,
+                            When examining some of the telehealth or telemedicine indictments a few common characteristics scream off the page. Relationships between dishonest doctors, pharmacies, labs and equipment or supplies providers are endemic in almost every case. In short,
                             collusion between bad actors is part of each major fraud case.
                         </p>
                     </div>
                     <div class="sol_para sol_mar_top">
-                        <h4 class="text_color">The Solution – Part One: Detecting Problem Providers, Behaviors and
-                            Relationships
+                        <h4 class="text_color">The Solution – Part One: Detecting Problem Providers, Behaviors and Relationships
                         </h4>
                         <p class="blog-detail-subtitle">
-                            Healthcare payers including government agencies, private insurers and self-funded employers
-                            are all asking the same question, “How can we detect bad actors BEFORE they have the
-                            opportunity to commit fraud?”. The answer lies in using advanced artificial
-                            intelligence technology to connect-the-dots between structured and unstructured data from
-                            related and unrelated sources.
+                            Healthcare payers including government agencies, private insurers and self-funded employers are all asking the same question, “How can we detect bad actors BEFORE they have the opportunity to commit fraud?”. The answer lies in using advanced artificial
+                            intelligence technology to connect-the-dots between structured and unstructured data from related and unrelated sources.
                         </p>
                         <p class="blog-detail-subtitle">
-                            APATICS was recently awarded a core technology patent for our HALO AI<sup
-                                class="small_tm">TM</sup> data intelligence platform that powers a machine-learning
-                            model trained using representations of a set of resource requests and authorization
-                            determinations to identify and adjudicate
-                            behaviors and transactions that are representative, or predictive of operational threats. In
-                            simple language, our APATICS Provider Network Integrity & Performance Solution, powered by
-                            HALO AI<sup class="small_tm">TM</sup>, can be used to identify problem
-                            providers, relationships and behaviors. Here is how it works.
+                            APATICS was recently awarded a core technology patent for our HALO AI<sup class="small_tm">TM</sup> data intelligence platform that powers a machine-learning model trained using representations of a set of resource requests
+                            and authorization determinations to identify and adjudicate behaviors and transactions that are representative, or predictive of operational threats. In simple language, our APATICS Provider Network Integrity & Performance
+                            Solution, powered by HALO AI<sup class="small_tm">TM</sup>, can be used to identify problem providers, relationships and behaviors. Here is how it works.
                         </p>
                     </div>
                     <div class="container power_blue_box_mar_top">
@@ -356,74 +337,48 @@
                                         <img src="./images/left-quote_y.png" class="img_size" />
                                     </sup> -->
                             <h2 class="font-italic blog_1_quote_27">
-                                    <img src="images/left.png" alt="Quote" class="top" />This powerful fraud-fighting solution is on 24/7 empowering payers to stay ahead of
-                                fraudulent providers…<img src="images/right.png" alt="Quote"class="bottom" />
+                                <img src="images/left.png" alt="Quote" class="top" />This powerful fraud-fighting solution is on 24/7 empowering payers to stay ahead of fraudulent providers…<img src="images/right.png" alt="Quote" class="bottom" />
                             </h2>
                             <!-- <sup class="vert_align">
                                         <img src="./images/left-quote_y.png" class="img_size img_rotate" />
                                     </sup> -->
 
                             <p class="blog-detail-subtitle mt-2 mb-0 hide_mob">
-                                APATICS Provider Network Integrity & Performance Solution, powered by HALO AI<sup
-                                    class="small_tm">TM</sup> uses provider data, payer data, public data and our own
-                                proprietary database of 6.7 million NPIs to immediately and constantly detect
-                                problematic activity on any provider network.
-                                The immediate output is detection of unauthorized providers, fraudulent providers
-                                operating under aliases, potentially fraudulent providers and potential collusion and
-                                relationships that point to fraudulent intent. And,
-                                because fraud and fraudulent providers are dynamic, APATICS Provider Network Integrity &
-                                Performance Solution, powered by HALO AI<sup class="small_tm">TM</sup> provides
-                                continuous surveillance to detect changes in provider demographics, status, behaviors
-                                and relationships that are indicators of new fraudulent behaviors.
+                                APATICS Provider Network Integrity & Performance Solution, powered by HALO AI<sup class="small_tm">TM</sup> uses provider data, payer data, public data and our own proprietary database of 6.7 million NPIs to immediately
+                                and constantly detect problematic activity on any provider network. The immediate output is detection of unauthorized providers, fraudulent providers operating under aliases, potentially fraudulent providers and potential
+                                collusion and relationships that point to fraudulent intent. And, because fraud and fraudulent providers are dynamic, APATICS Provider Network Integrity & Performance Solution, powered by HALO AI<sup class="small_tm">TM</sup>                                provides continuous surveillance to detect changes in provider demographics, status, behaviors and relationships that are indicators of new fraudulent behaviors.
                             </p>
                         </div>
                         <p class="blog-detail-subtitle  mb-0 for_mob responsive_mt">
-                                APATICS Provider Network Integrity & Performance Solution, powered by HALO AI<sup
-                                    class="small_tm">TM</sup> uses provider data, payer data, public data and our own
-                                proprietary database of 6.7 million NPIs to immediately and constantly detect
-                                problematic activity on any provider network.
-                                The immediate output is detection of unauthorized providers, fraudulent providers
-                                operating under aliases, potentially fraudulent providers and potential collusion and
-                                relationships that point to fraudulent intent. And,
-                                because fraud and fraudulent providers are dynamic, APATICS Provider Network Integrity &
-                                Performance Solution, powered by HALO AI<sup class="small_tm">TM</sup> provides
-                                continuous surveillance to detect changes in provider demographics, status, behaviors
-                                and relationships that are indicators of new fraudulent behaviors.
-                            </p>
+                            APATICS Provider Network Integrity & Performance Solution, powered by HALO AI<sup class="small_tm">TM</sup> uses provider data, payer data, public data and our own proprietary database of 6.7 million NPIs to immediately and
+                            constantly detect problematic activity on any provider network. The immediate output is detection of unauthorized providers, fraudulent providers operating under aliases, potentially fraudulent providers and potential collusion
+                            and relationships that point to fraudulent intent. And, because fraud and fraudulent providers are dynamic, APATICS Provider Network Integrity & Performance Solution, powered by HALO AI<sup class="small_tm">TM</sup> provides
+                            continuous surveillance to detect changes in provider demographics, status, behaviors and relationships that are indicators of new fraudulent behaviors.
+                        </p>
                     </div>
                     <div class="sol_para mar_top_up_41">
-                        <h4 class="text_color">The Solution – Part Two: Detecting and Preventing Problem Claims
-                            Transactions</h4>
+                        <h4 class="text_color">The Solution – Part Two: Detecting and Preventing Problem Claims Transactions
+                        </h4>
                         <p class="blog-detail-subtitle">
-                            Immediately and continuously identifying potentially fraudulent providers is one-half of the
-                            solution. The other half is detecting potentially fraudulent claims BEFORE they are paid.
+                            Immediately and continuously identifying potentially fraudulent providers is one-half of the solution. The other half is detecting potentially fraudulent claims BEFORE they are paid.
                         </p>
                         <p class="blog-detail-subtitle">
-                            APATICS FWA Detection, Prevention & Recovery Solution, powered by HALO AI<sup
-                                class="small_tm">TM</sup> reduces telehealth fraud waste and abuse by automating
-                            real-time financial, clinical and behavioral insights that help detect, prevent and recover
-                            fraudulent claims payments pre-adjudication.
-                            The power of HALO AI<sup class="small_tm">TM</sup> automated machine learning literally
-                            enables every claim to be analyzed with millions of combinations of CPT, ICD-10 and other
-                            code data along with payer guidelines and the provider network data.
+                            APATICS FWA Detection, Prevention & Recovery Solution, powered by HALO AI<sup class="small_tm">TM</sup> reduces telehealth fraud waste and abuse by automating real-time financial, clinical and behavioral insights that help
+                            detect, prevent and recover fraudulent claims payments pre-adjudication. The power of HALO AI<sup class="small_tm">TM</sup> automated machine learning literally enables every claim to be analyzed with millions of combinations
+                            of CPT, ICD-10 and other code data along with payer guidelines and the provider network data.
                         </p>
                         <p class="blog-detail-subtitle">
-                            This powerful fraud-fighting solution is on 24/7 empowering payers to stay ahead of
-                            fraudulent providers and reduce that amount of FWA leakage that gets through the system.
+                            This powerful fraud-fighting solution is on 24/7 empowering payers to stay ahead of fraudulent providers and reduce that amount of FWA leakage that gets through the system.
                         </p>
                     </div>
                     <div class="sol_para mar_top_up_30 contact-on-apatics">
                         <h4 class="text_color">Telemedicine is a Great. Keep it Clean and Efficient</h4>
                         <p class="blog-detail-subtitle">
-                            APATICS is committed to providing the data insights to help healthcare payers immediately
-                            and continuously reduce risks to improve clinical and financial performance. Our HALO AI<sup
-                                class="small_tm">TM</sup> powered solutions provide a much-needed solution to keep the
-                            telehealth
-                            and telemedicine markets clean and healthy.
+                            APATICS is committed to providing the data insights to help healthcare payers immediately and continuously reduce risks to improve clinical and financial performance. Our HALO AI<sup class="small_tm">TM</sup> powered solutions
+                            provide a much-needed solution to keep the telehealth and telemedicine markets clean and healthy.
                         </p>
                         <p class="color_change blog-detail-subtitle">
-                            For more information about the APATICS solutions discussed in this story, please contact us
-                            at <a href="mailto:info@apatics.net">info@apatics.net.</a>
+                            For more information about the APATICS solutions discussed in this story, please contact us at <a href="mailto:info@apatics.net">info@apatics.net.</a>
                         </p>
                     </div>
                     <div class="mar_top_up_pic blog-writer">
@@ -431,8 +386,7 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex align-items-center">
                                 <img src="./images/dimitri_blog_1.png" class="img-fluid" width="120" />
                                 <p class="info blog-detail-subtitle">
-                                    Dimitri Arges is the Chief Executive Officer at APATICS.<br> He can be reached at <a
-                                        href="mailto:darges@apatics.net" class="bold_set_text">darges@apatics.net.</a>
+                                    Dimitri Arges is the Chief Executive Officer at APATICS.<br> He can be reached at <a href="mailto:darges@apatics.net" class="bold_set_text">darges@apatics.net.</a>
                                 </p>
                             </div>
                         </div>
@@ -448,8 +402,7 @@
     <!-- Blog Article 1 story -->
 
     <!-- Blog Article 2 story -->
-    <div class="modal story-modal modal-bottom fade" id="theja_birur" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal story-modal modal-bottom fade" id="theja_birur" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="blog_2_mar_set">
@@ -457,7 +410,7 @@
                         <div class="row">
                             <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
                                 <img src="./images/blog_22.png" width="314" class="img-fluid full_width_img_resp hide_mob" />
-                                <img src="./images/blog222.png"  class="img-fluid full_width_img_resp for_mob" />
+                                <img src="./images/blog222.png" class="img-fluid full_width_img_resp for_mob" />
                             </div>
                             <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 res_pad_set">
                                 <h2 class="big_title">‘Fountain of Youth’ Doctor Fraud Is
@@ -465,20 +418,10 @@
                                 </h2>
                                 <h4 class="text_color pad_new">By Theja Birur</h4>
                                 <p class="para_text_26 blog-detail-subtitle">
-                                    The fraud, waste and abuse cases and convictions being prosecuted by the Department
-                                    of Justice point to the rising sophistication and negative impact a single provider,
-                                    or small group of providers, can have on the healthcare system. This week’s
-                                    conviction
-                                    of a physician known as the ‘Fountain of Youth’ doctor is the latest example of
-                                    fraudulent activity that is now detectable and preventable using APATICS’ patented
-                                    HALO AI<sup class="small_tm">TM</sup> intelligence platform based on machine and
-                                    deep-learning. A Fox Chapel, PA cardiologist was sentenced to six and one-half years
-                                    in prison on August 5 for his role in a fraud scheme involving more than $13 million
-                                    in false insurance claims, according to the Pittsburgh
-                                    Post-Gazette.1 The fraudulent behavior occurred between 2008 and 2013 and included
-                                    claims submitted to private health insurance companies as well as government
-                                    insurance programs for an outpatient treatment called External
-                                    Counter Pulsation.
+                                    The fraud, waste and abuse cases and convictions being prosecuted by the Department of Justice point to the rising sophistication and negative impact a single provider, or small group of providers, can have on the healthcare system. This week’s conviction
+                                    of a physician known as the ‘Fountain of Youth’ doctor is the latest example of fraudulent activity that is now detectable and preventable using APATICS’ patented HALO AI<sup class="small_tm">TM</sup>                                    intelligence platform based on machine and deep-learning. A Fox Chapel, PA cardiologist was sentenced to six and one-half years in prison on August 5 for his role in a fraud scheme involving more than $13 million in
+                                    false insurance claims, according to the Pittsburgh Post-Gazette.1 The fraudulent behavior occurred between 2008 and 2013 and included claims submitted to private health insurance companies as well as government insurance
+                                    programs for an outpatient treatment called External Counter Pulsation.
                                 </p>
                             </div>
                         </div>
@@ -488,11 +431,8 @@
                                     <br>Billing Behaviors
                                 </h4>
                                 <p class="para_text_26 blog-detail-subtitle">
-                                    Dr. Samirkumar J. Shah’s was a textbook for how providers have been able to commit
-                                    fraud in the past. These same common fraud characteristics can now be detected and
-                                    prevented before fraudulent claims are paid. When you examine the characteristics of
-                                    Dr. Shah’s fraudulent behaviors you see the following behaviors that are common in
-                                    fraud cases:
+                                    Dr. Samirkumar J. Shah’s was a textbook for how providers have been able to commit fraud in the past. These same common fraud characteristics can now be detected and prevented before fraudulent claims are paid. When you examine the characteristics of
+                                    Dr. Shah’s fraudulent behaviors you see the following behaviors that are common in fraud cases:
                                 </p>
                             </div>
                             <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
@@ -501,9 +441,7 @@
                                                 <img src="./images/left-quote_y.png" class="img_size" />
                                             </sup> -->
                                     <h2 class="font-italic  healthcare_box_set">
-                                            <img src="images/left.png" alt="Quote"class="top" />These same common fraud
-                                         characteristics can now be
-                                        detected and prevented…<img src="images/right.png" alt="Quote" class="bottom"/>
+                                        <img src="images/left.png" alt="Quote" class="top" />These same common fraud characteristics can now be detected and prevented…<img src="images/right.png" alt="Quote" class="bottom" />
                                     </h2>
                                     <!-- <sup class="vert_align">
                                                 <img src="./images/left-quote_y.png" class="img_size img_rotate" />
@@ -525,12 +463,8 @@
                             </ul>
                         </div>
                         <p class="para_text_26 mar_custom_para blog-detail-subtitle">
-                            So what’s the answer to detecting and preventing healthcare fraud like that committed by Dr.
-                            Shah? APATICS FWA Detection, Prevention & Recovery solution, powered by HALO AI<sup
-                                class="small_tm">TM</sup> reduces healthcare fraud, waste and abuse by automating
-                            real-time financial,
-                            clinical and behavioral data insights that help detect, prevent and recover fraudulent claim
-                            payments.
+                            So what’s the answer to detecting and preventing healthcare fraud like that committed by Dr. Shah? APATICS FWA Detection, Prevention & Recovery solution, powered by HALO AI<sup class="small_tm">TM</sup> reduces healthcare fraud,
+                            waste and abuse by automating real-time financial, clinical and behavioral data insights that help detect, prevent and recover fraudulent claim payments.
                         </p>
                         <div class="row blue_margin_top26">
                             <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
@@ -542,23 +476,16 @@
                                         <br> in near real-time using
                                         <br> HALO AI
                                         <sup class="font_weight_normal">TM</sup>
-                                        <img src="images/right.png" alt="Quote"class="bottom" />
+                                        <img src="images/right.png" alt="Quote" class="bottom" />
                                     </h2>
                                 </div>
                             </div>
                             <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 res_top_margin">
                                 <h4 class="text_color pad_new">Detecting Anomalies Is Key To Stopping Fraud</h4>
                                 <p class="para_text_26 blog-detail-subtitle">
-                                    The key is detecting anomalies in relationships, behaviors and outcomes in a way
-                                    that immediately and continuously reduces risk. Automated machine-learning empowers
-                                    24/7 surveillance of financial and clinical claims data and interrogates each and
-                                    every
-                                    claim against millions of data points including ICD-10 codes, CPT codes, payer
-                                    guidelines, collusion maps, patterns and relationships with other providers.
-                                    APATICS’ proprietary database of information on 6.7 million
-                                    providers adds another powerful layer of financial and demographic sophistication to
-                                    this surveillance. In doctor Shah’s case, the blatant anomalies in his claims would
-                                    have been identified in near real-time using the
+                                    The key is detecting anomalies in relationships, behaviors and outcomes in a way that immediately and continuously reduces risk. Automated machine-learning empowers 24/7 surveillance of financial and clinical claims data and interrogates each and every
+                                    claim against millions of data points including ICD-10 codes, CPT codes, payer guidelines, collusion maps, patterns and relationships with other providers. APATICS’ proprietary database of information on 6.7 million
+                                    providers adds another powerful layer of financial and demographic sophistication to this surveillance. In doctor Shah’s case, the blatant anomalies in his claims would have been identified in near real-time using the
                                     HALO AI<sup class="small_tm">TM</sup> artificial intelligence platform.
                                 </p>
                             </div>
@@ -566,31 +493,22 @@
                         <div class="blue_margin_top26 contact-on-apatics">
                             <h4 class="text_color pad_new">Return Critical Resources Back To The Healthcare System</h4>
                             <p class="blog-detail-subtitle">
-                                FBI Special Agent in Charge, Robert Jones said, “Health care fraud is a serious problem
-                                that impacts every American. It takes critical resources from our health care system and
-                                increases health care costs for everyone.”
+                                FBI Special Agent in Charge, Robert Jones said, “Health care fraud is a serious problem that impacts every American. It takes critical resources from our health care system and increases health care costs for everyone.”
                             </p>
                             <p class="blog-detail-subtitle">
-                                My work in both the Canadian and American healthcare systems showed me the extent to
-                                which care quality and quantity are compromised because of fraudulent actors. Our
-                                initial commercial deployment of the APATICS
-                                <span class="font-italic">FWA Detection, Prevention & Recovery</span> solution, powered
-                                by HALO AI<sup class="small_tm">TM</sup> showed us that this fraud, waste and abuse
-                                involves a range of one to 20 percent of providers depending on the network.
+                                My work in both the Canadian and American healthcare systems showed me the extent to which care quality and quantity are compromised because of fraudulent actors. Our initial commercial deployment of the APATICS
+                                <span class="font-italic">FWA Detection, Prevention & Recovery</span> solution, powered by HALO AI<sup class="small_tm">TM</sup> showed us that this fraud, waste and abuse involves a range of one to 20 percent of providers
+                                depending on the network.
                             </p>
                             <p class="blog-detail-subtitle">
-                                Most fraudsters’ relationships, collusions and behaviors are generally the same, and
-                                they are detectable. That is why I was motivated to build the HALO AI<sup
-                                    class="small_tm">TM</sup> artificial intelligence platform. Healthcare needs this
-                                type of tool to fix what is estimated to
-                                be a $700 billion problem in the United States.
+                                Most fraudsters’ relationships, collusions and behaviors are generally the same, and they are detectable. That is why I was motivated to build the HALO AI<sup class="small_tm">TM</sup> artificial intelligence platform.
+                                Healthcare needs this type of tool to fix what is estimated to be a $700 billion problem in the United States.
                             </p>
                             <p class="font_small blog-detail-subtitle">
                                 1 Torsten Ove, Pittsburgh Post-Gazette, August 5, 2021
                             </p>
                             <p class="color_change blog-detail-subtitle">
-                                For more information about the APATICS solutions discussed in this story, please contact
-                                us at
+                                For more information about the APATICS solutions discussed in this story, please contact us at
                                 <a href="#">info@apatics.net.</a>
                             </p>
                         </div>
@@ -610,10 +528,8 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex align-items-center">
                                     <img src="./images/thejaa.png" class="img-fluid" width="120" />
                                     <p class="info blog-detail-subtitle">
-                                        Theja Birur is the Chief Technology Officer at APATICS.<br> She can be reached
-                                        at
-                                        <a href="mailto:tbirur@apatics.net"
-                                            class="bold_set_text">tbirur@apatics.net.</a>
+                                        Theja Birur is the Chief Technology Officer at APATICS.<br> She can be reached at
+                                        <a href="mailto:tbirur@apatics.net" class="bold_set_text">tbirur@apatics.net.</a>
                                     </p>
                                 </div>
                             </div>
@@ -632,8 +548,7 @@
 
 
     <!-- Read story modal -->
-    <div class="modal fade contact-modal" id="contact_modal" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal fade contact-modal" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="contac-modal-form">
@@ -723,8 +638,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 d-flex align-items-center justify-content-end flex-wrap">
-                                <div class="g-recaptcha" data-sitekey='6LewTCUcAAAAAGGb5tyeHoDOJAFx7rH0DF1u3xMb'
-                                    name="g-recaptcha-response"></div>
+                                <div class="g-recaptcha" data-sitekey='' name="g-recaptcha-response" id="captcha"></div>
                                 <div id="captcha_msg"></div>
                                 <div class="d-flex align-items-center w-100">
                                     <button type="submit" name="submit" id="submit" class="registerbtn">Submit</button>
