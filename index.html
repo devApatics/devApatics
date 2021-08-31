@@ -27,7 +27,7 @@
             //For load site_key
             $.ajax({
                 type: 'GET',
-                url: 'site_key.php',
+                url: 'config.php',
                 success: function(response) {
                     $("#captcha").attr('data-sitekey', response);
                 }
@@ -360,8 +360,9 @@
                 <div class="col-md-2 col-sm-4 ipad-size">
                     <img src="images/Elevating_Icon.svg" alt="Elevating" />
                     <h2>ELEVATING</h2>
-                    <h4>care quality and transparency</h4>
+                    <h4>care quality and transparency</h4> 
                     <p>by automating cost, claims and outcomes data insights to provide a dynamic value profile that helps payers, providers, and patients make a value-based care decisions</p>
+                    
                 </div>
                 <div class="col-md-2 col-sm-4 ipad-size">
                     <img src="images/Reducing_Icon-cylinder.svg" alt="Reducing_Icon-cylinder" />
