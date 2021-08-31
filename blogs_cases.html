@@ -16,6 +16,15 @@
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
     <script src='https://www.google.com/recaptcha/api.js' async defer></script>
     <script>
+        function capchaLoad() { 
+            $.ajax({
+                type: 'GET',
+                url: 'site_key.php',
+                success: function(response) {
+                    $("#captcha").attr('data-sitekey', response);
+                }
+            }); 
+        } 
         jQuery(document).ready(function(jQuery) {
             jQuery("#header").load("header.html");
             jQuery("#footer").load("footer.html");
@@ -23,13 +32,13 @@
             jQuery("#footer2").load("footer.html");
 
             //For load site_key
-            $.ajax({
-                type: 'GET',
-                url: 'site_key.php',
-                success: function(response) {
-                    $("#captcha").attr('data-sitekey', response);
-                }
-            });
+            // $.ajax({
+            //     type: 'GET',
+            //     url: 'site_key.php',
+            //     success: function(response) {
+            //         $("#captcha").attr('data-sitekey', response);
+            //     }
+            // });
 
             // For jQuery Validation
             $("#contact_form").validate({
@@ -181,7 +190,7 @@
     </script>
 </head>
 
-<body>
+<body onload='capchaLoad();'>
     <div id="header" class="custom-header">
     </div>
     <div class="margin_set_top_adjust_26 mt-0 blog-articles">
