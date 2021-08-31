@@ -465,7 +465,11 @@
         margin-top: 205px;
     }.slider_height{
         height: 100%;
-    }.custom_slider_about{
+        margin: 0px auto;
+    }.slider-text{
+        margin: 0 auto;
+    }
+    .custom_slider_about{
         margin-top: auto !important;
         margin-bottom: 0px;
     }.sanctioned{
@@ -511,9 +515,11 @@
     }.quote_left::after{
         top: 23px;
         right: 95px;
-    }.para_text_26.mar_custom_para.blog-detail-subtitle{
-        margin-top: 0px !important;
-    }.main_title_news br{
+    }
+    /* .para_text_26.mar_custom_para.blog-detail-subtitle{
+        margin-top: 0px !important; */
+    }
+    .main_title_news br{
         display: none;
     }.title_top_main_set br{
         display: none;
@@ -897,5 +903,7 @@
         height: 330px !important;
     }.healthcare_box_set br{
         display: none;
+    }.mobile_san img {
+        margin-top: -25px;
     }
 }

@@ -169,11 +169,15 @@ ul{
     background-size: cover;
 }
 .sanctioned{
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     bottom: auto;
     right: 0;
-    transform: translateY(-50px);
+    transform: translateY(-50px); */
+    position: absolute;
+    top: 18%;
+    bottom: auto;
+    right: 15%;
 }
 .logo-section{
     text-align: center;
@@ -318,6 +322,7 @@ ul{
 .automated-date .health-care-challange{
     max-width: 1000px;
     margin: auto;
+    align-items: start !important;
 }
 .health-counter{
     max-width: 194px;
@@ -420,6 +425,7 @@ ul{
     line-height: 30px;
     font-family: 'Montserrat-Bold';
     color: #ffffff;
+    margin-top: -6px;
 }
 .risk-detail{
     margin-bottom: 30px;
@@ -1548,7 +1554,7 @@ letter-spacing: 0.18px;
     display: block;
     position: relative;
     padding-left: 30px;
-    max-width: 375px !important;
+    max-width: 490px !important;
     margin: 0 auto 15px;
     padding-top: 30px;
     padding-bottom: 30px;
