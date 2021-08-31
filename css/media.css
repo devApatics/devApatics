@@ -114,6 +114,7 @@
         max-width: 100%;
         display: flex;
         order: 2;
+        padding: 40px 25px 0 25px;
     }
     .health-tip-title,.health-counter,.health-tip-list {
         max-width: 100%;
@@ -279,8 +280,12 @@
     }.white_paper_paragraph {
         margin-bottom: 42px;
     }
-}
-@media only screen and (max-width: 768px){
+    .automated-date{
+        padding: 30px 15px 0px;
+    }
+    .automated-date .health-counter h4{
+        margin: 0px 0px 42px;
+    } 
     .res_query{
         margin-top: 15px;
     }
@@ -317,18 +322,25 @@
         display: block !important;
     }.ipad_margin_top{
         margin-top: 30px;
+        padding: 0 25px;
     }.connect-with-us{
         padding-left: 0px;
         padding-right: 0px;
-    }.connect-with-us .container{
+    }.connect-with-us .container,.cost-reduce .container{
         padding: 0px;
-        max-width: 780px;
+        max-width: 100%;
     }.contact-title h4{
         padding-left: 25px;
         padding-right: 25px;
-    }.connect-option-selection{
+    }.connect-option-selection,.cost-reduce .container{
         padding-left: 25px;
         padding-right: 25px;
+    }
+    .contact-title {
+        max-width: 100%;
+    }
+    .health-tip-title, .health-counter, .health-tip-list{
+        padding: 0px;
     }
 }
 @media only screen and (min-width: 768px){
@@ -427,6 +439,10 @@
     }.automated-date{
         border-top: 4px solid #FAA916;
         border-bottom: 4px solid #FAA916;
+    }
+    .slider-title{
+        margin: 20px auto;
+        padding: 0;
     }.cost-reduce-listing{
         display: inline-grid !important;
         text-align: center;
@@ -455,8 +471,10 @@
         flex-wrap: wrap;
         margin-top: auto;
         margin: 0 auto;
+        width: 100%;
     }.slider-about-it{
         margin-left: 0px;
+        justify-content: center;
     }.signature-text{
         margin-left: 0px; 
     }.logo-section h6{
@@ -494,6 +512,7 @@
     }.slider_height{
         height: 100%;
         margin: 0px auto;
+        max-width: 100%;
     }.slider-text{
         margin: 0px 20px auto;
     }

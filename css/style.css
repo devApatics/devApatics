@@ -322,7 +322,7 @@ ul{
 .automated-date .health-care-challange{
     max-width: 1000px;
     margin: auto;
-    align-items: start !important;
+    /* align-items: start !important; */
 }
 .health-counter{
     max-width: 194px;
@@ -1819,12 +1819,12 @@ div#captcha_msg {
 .slider-title .separator::before{
     content: '';
     display: inline-block;
-    border: 0.25px solid #1969A2;
+    border: 0.25px solid rgba(25, 105, 162, 0.25);
     width: 4px;
     height: 4px;
     border-radius: 100%;
     position: absolute;
-    top: -2.45px;
+    top: -2.40px;
     left: 0;
     background-color: #f3f8fb;
 
