@@ -23,7 +23,7 @@
             //For load site_key
             $.ajax({
                 type: 'GET',
-                url: 'config.php',
+                url: 'site_key.php',
                 success: function(response) {
                     $("#captcha").attr('data-sitekey', response);
                 }
