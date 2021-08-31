@@ -1220,7 +1220,11 @@ font-size: 14px;
     background-color:#3379B01A;
     padding: 20px;
     margin-top: 60px;
-
+}
+.set_min_height{
+    min-height: 180px;
+    display: flex;
+    align-items: center;
 }
 .blue_pad_set{
     padding-top: 16px;
@@ -1571,6 +1575,10 @@ letter-spacing: 0.18px;
 .blue_margin_top26{
     margin-top: 30px;
 }
+.blatant-anomalies{
+    display: flex;
+    align-items: center;
+}
 /* Blogs_2 ends */
 /* Ankit css */
 
@@ -1804,6 +1812,23 @@ div#captcha_msg {
 }
 .company-news .email-link a,.company-news .email-link a:hover{
     color: #3379B0;
+}
+.slider-title .separator{
+    position: relative;
+}
+.slider-title .separator::before{
+    content: '';
+    display: inline-block;
+    border: 0.25px solid #1969A2;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    position: absolute;
+    top: -2.45px;
+    left: 0;
+    background-color: #f3f8fb;
+
+
 }
 .slider-copyright-text{
     font-size: 5px;
