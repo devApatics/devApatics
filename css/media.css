@@ -553,8 +553,7 @@
     }.space_adjust_top p{
         text-align: center;
     }
-    .g-recaptcha{
-        margin-bottom: 30px;
+    .g-recaptcha{ 
         margin-top: 30px;
     }
     div#captcha_msg{
@@ -615,6 +614,15 @@
         margin: 0 auto;
     }.registerbtn{
         margin: 0 auto;
+    }
+    .contact-submit-detail{
+        justify-content: center !important;
+    }
+    .cookies_text{
+        align-items: flex-start;
+    }
+    .bell{
+        margin-right: 0px;
     }
 }
 @media only screen and (max-width: 766px){
