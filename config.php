@@ -10,7 +10,8 @@
 
 	// -------------------------------Google captcha--------------------------------------// 
  
-	$google_secret_key = getenv("googleSecretKey");   
+	// $google_secret_key = "6Le5poEbAAAAAOlJ8sYT6zJie-QoAVjtNrMx_LKm";
+	$google_secret_key = getenv("googleSecretKey");
 	
 	// ----------------------------------- DB Configuration -----------------------------------// 
 	// DB Cred.

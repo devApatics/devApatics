@@ -16,15 +16,6 @@
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
     <script src='https://www.google.com/recaptcha/api.js' async defer></script>
     <script>
-        function capchaLoad() { 
-            $.ajax({
-                type: 'GET',
-                url: 'site_key.php',
-                success: function(response) {
-                    $("#captcha").attr('data-sitekey', response);
-                }
-            }); 
-        } 
         jQuery(document).ready(function(jQuery) {
             jQuery("#header").load("header.html");
             jQuery("#footer").load("footer.html");
@@ -32,13 +23,13 @@
             jQuery("#footer2").load("footer.html");
 
             //For load site_key
-            // $.ajax({
-            //     type: 'GET',
-            //     url: 'site_key.php',
-            //     success: function(response) {
-            //         $("#captcha").attr('data-sitekey', response);
-            //     }
-            // });
+            $.ajax({
+                type: 'GET',
+                url: 'site_key.php',
+                success: function(response) {
+                    $("#captcha").attr('data-sitekey', response);
+                }
+            });
 
             // For jQuery Validation
             $("#contact_form").validate({
@@ -190,7 +181,7 @@
     </script>
 </head>
 
-<body onload='capchaLoad();'>
+<body>
     <div id="header" class="custom-header">
     </div>
     <div class="margin_set_top_adjust_26 mt-0 blog-articles">
@@ -646,7 +637,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 d-flex align-items-center justify-content-end flex-wrap">
-                                <div class="g-recaptcha" data-sitekey='' name="g-recaptcha-response" id="captcha"></div>
+                                <div class="g-recaptcha" data-sitekey="" name="g-recaptcha-response" id="captcha"></div>
                                 <div id="captcha_msg"></div>
                                 <div class="d-flex align-items-center w-100">
                                     <button type="submit" name="submit" id="submit" class="registerbtn">Submit</button>
