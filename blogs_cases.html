@@ -15,7 +15,7 @@
     <link href="css/media.css" rel="stylesheet" type="text/css" />
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
     <script src='https://www.google.com/recaptcha/api.js' async defer></script>
-    <script>
+    <script> 
         jQuery(document).ready(function(jQuery) {
             jQuery("#header").load("header.html");
             jQuery("#footer").load("footer.html");
@@ -26,11 +26,11 @@
             $.ajax({
                 type: 'GET',
                 url: 'site_key.php',
+                timeout: 300,
                 success: function(response) {
                     $("#captcha").attr('data-sitekey', response);
                 }
-            });
-
+            }); 
             // For jQuery Validation
             $("#contact_form").validate({
                 rules: {

@@ -9,9 +9,8 @@
 	$to_admin_email = getenv("toEmail"); // Set this to email send to admin 
 
 	// -------------------------------Google captcha--------------------------------------// 
- 
-	// $google_secret_key = "6Le5poEbAAAAAOlJ8sYT6zJie-QoAVjtNrMx_LKm";
-	$google_secret_key = getenv("googleSecretKey");
+	
+  	$google_secret_key = getenv("googleSecretKey");
 	
 	// ----------------------------------- DB Configuration -----------------------------------// 
 	// DB Cred.
@@ -19,6 +18,7 @@
 	$username = getenv("UId");
 	$password = getenv("dbPWD");
 	$database = getenv("database"); 
+	
 
 	$conn = new mysqli($servername, $username, $password, $database); // For DB Connection
 

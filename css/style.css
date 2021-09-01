@@ -2007,7 +2007,7 @@ div#captcha_msg {
     align-items: center;
 }
 .close_btn img{
-    width: 10px;
+    width: 13px;
 }
 .btn_img{
     padding: 0 !important;
@@ -2021,7 +2021,7 @@ div#captcha_msg {
     flex: unset;
 }
 .set_accept button:hover{
-    background-color: #0f01019c;
+    background-color: rgba(52, 123, 178, 0.3);
     color: #fff;
 }
 /* Cookies CSS Ends */

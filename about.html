@@ -24,6 +24,7 @@
             $.ajax({
                 type: 'GET',
                 url: 'site_key.php',
+                timeout: 300,
                 success: function(response) {
                     $("#captcha").attr('data-sitekey', response);
                 }
