@@ -315,8 +315,8 @@
         padding: 7px 7px 7px;
     }.slider-title br{
         display: none;
-    }.set_content{
-        /* display: inline !important; */
+    }.set_inline{
+        display: inline !important; 
         text-align: center;
     }.padding_bg_dark_responsive{
         padding: 30px;
