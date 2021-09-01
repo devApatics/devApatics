@@ -859,8 +859,6 @@
         margin-top: 40px;
     }.contact-details{
         margin-top: 45px;
-    }.contact-details img{
-        margin-bottom: 0px;
     }.custom-header .navbar{
         display: flex; 
         justify-content: space-between; 
@@ -905,6 +903,10 @@
     }.quote_left::after {
         left: 161px !important;
         top: 70px !important;
+    }.address-section ul{
+        flex-wrap: wrap;
+    }.slider-about-it{
+        font-size: 21px;
     }
 }
 @media only screen and (min-width: 767px){
@@ -935,6 +937,8 @@
         top: 70px !important;
     }.quote_left::before {
         left: 5px !important;
+    }.mobile_san img {
+        margin-top: -120px;
     }
 }
 @media only screen and (max-width: 320px){
