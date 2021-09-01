@@ -62,6 +62,21 @@
         top: 185px !important;
     }
 }
+@media only screen and (max-width: 999px){
+    .cookie-popup--dark .d-flex{
+        display: grid !important;
+        text-align: center;
+        justify-content: center;
+    }.set_accept{
+        text-align: center;
+        margin-left: 40px;
+        margin-top: 10px;
+    }.close_btn{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+}
 @media only screen and (max-width: 991px){
     .clain_slide .container{
         max-width: 100%; 
@@ -447,7 +462,7 @@
         display: inline-grid !important;
         text-align: center;
     }.cost-reduce-listing .col-md-2{
-        max-width: 550px;
+        max-width: 767px;
     }.align_mobile{
         text-align: center;
     }.risk-detail img{
@@ -592,6 +607,14 @@
         margin-top: 38px;
     }.pad_set_about{
         margin-top: 38px;
+    }.mobile_top_margin_set_health{
+        margin-top: 0px;
+    }.cookie-popup--short{
+        font-size: 13px;
+    }.modal-logo img{
+        margin: 0 auto;
+    }.registerbtn{
+        margin: 0 auto;
     }
 }
 @media only screen and (max-width: 766px){
@@ -618,6 +641,8 @@
  @media only screen and (max-width: 632px){
      .contact_us h3 br{
          display: none;
+     }.close_btn{
+        right: 15px;
      }
  }
  @media only screen and (max-width: 520px){
@@ -844,6 +869,10 @@
     }.quote_left::after {
         left: 210px !important;
         top: 70px !important;
+    }.mobile_san img{
+        margin-top: -75px;
+    }.mobile_top_margin_set_health{
+        margin-top: 30px;
     }
 }
 @media only screen and (max-width: 435px){
@@ -955,7 +984,7 @@
     }.healthcare_box_set br{
         display: none;
     }.mobile_san img {
-        margin-top: -25px;
+        margin-top: -75px;
     }.slider-text {
         margin: 0px 0px auto;
     }
